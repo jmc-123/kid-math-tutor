@@ -1,6 +1,6 @@
 # 📚 人教版初中数学知识图谱
 
-基于 [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) 的数据结构 和 [https://github.com/Xww-coder/pep-math-taxonomy](https://github.com/Xww-coder/pep-math-taxonomy)](https://github.com/Xww-coder/pep-math-taxonomy)，覆盖**义务教育教科书·数学（人民教育出版社2022版）七至九年级全6册**的完整知识图谱。
+基于 [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) 的数据结构 和 [Xww-coder/pep-math-taxonomy](https://github.com/Xww-coder/pep-math-taxonomy)，覆盖**义务教育教科书·数学（人民教育出版社2022版）七至九年级全6册**的完整知识图谱。
 
 > **169 个微知识点 · 237 条前置依赖边 · 36 个领域聚类 · 覆盖初中数学全部章节**
 
