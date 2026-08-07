@@ -1,0 +1,251 @@
+{
+  "version": "pep-math-8up-v1",
+  "dependencies": [
+    {
+      "topicId": "mt_ch13_002",
+      "prerequisiteId": "mt_ch13_001",
+      "strength": "hard",
+      "reason": "三角形边的关系需先理解三角形的基本概念"
+    },
+    {
+      "topicId": "mt_ch13_003",
+      "prerequisiteId": "mt_ch13_001",
+      "strength": "hard",
+      "reason": "中线、高线、角平分线都是三角形内的线段，需先理解三角形概念"
+    },
+    {
+      "topicId": "mt_ch13_003",
+      "prerequisiteId": "mt_ch7_002",
+      "strength": "hard",
+      "reason": "高线的定义涉及垂线概念"
+    },
+    {
+      "topicId": "mt_ch13_004",
+      "prerequisiteId": "mt_ch13_001",
+      "strength": "hard",
+      "reason": "内角和定理是关于三角形三个角的性质"
+    },
+    {
+      "topicId": "mt_ch13_004",
+      "prerequisiteId": "mt_ch7_006",
+      "strength": "hard",
+      "reason": "证明内角和需要作平行线并利用平行线性质"
+    },
+    {
+      "topicId": "mt_ch13_005",
+      "prerequisiteId": "mt_ch13_004",
+      "strength": "hard",
+      "reason": "外角性质由内角和定理推导得出"
+    },
+    {
+      "topicId": "mt_ch14_001",
+      "prerequisiteId": "mt_ch13_001",
+      "strength": "hard",
+      "reason": "全等三角形需先理解三角形的边、角概念"
+    },
+    {
+      "topicId": "mt_ch14_001",
+      "prerequisiteId": "mt_ch7_008",
+      "strength": "soft",
+      "reason": "全等的引入通过平移、翻折、旋转，与平移变换有关联"
+    },
+    {
+      "topicId": "mt_ch14_002",
+      "prerequisiteId": "mt_ch14_001",
+      "strength": "hard",
+      "reason": "SSS是全等判定方法之一，需先掌握全等概念"
+    },
+    {
+      "topicId": "mt_ch14_003",
+      "prerequisiteId": "mt_ch14_001",
+      "strength": "hard",
+      "reason": "SAS是全等判定方法之一"
+    },
+    {
+      "topicId": "mt_ch14_004",
+      "prerequisiteId": "mt_ch14_001",
+      "strength": "hard",
+      "reason": "ASA/AAS是全等判定方法之一"
+    },
+    {
+      "topicId": "mt_ch14_004",
+      "prerequisiteId": "mt_ch13_004",
+      "strength": "soft",
+      "reason": "AAS的成立依赖内角和定理（知道两角可推第三角）"
+    },
+    {
+      "topicId": "mt_ch14_005",
+      "prerequisiteId": "mt_ch14_003",
+      "strength": "hard",
+      "reason": "HL可视为SAS在直角三角形中的特殊情形"
+    },
+    {
+      "topicId": "mt_ch14_006",
+      "prerequisiteId": "mt_ch14_004",
+      "strength": "hard",
+      "reason": "角平分线性质的证明需要用全等三角形（ASA或AAS）"
+    },
+    {
+      "topicId": "mt_ch14_006",
+      "prerequisiteId": "mt_ch14_005",
+      "strength": "hard",
+      "reason": "角平分线性质证明中构造直角三角形用HL"
+    },
+    {
+      "topicId": "mt_ch15_001",
+      "prerequisiteId": "mt_ch7_008",
+      "strength": "soft",
+      "reason": "轴对称与平移都是图形变换，有概念类比"
+    },
+    {
+      "topicId": "mt_ch15_002",
+      "prerequisiteId": "mt_ch15_001",
+      "strength": "hard",
+      "reason": "轴对称的性质建立在轴对称概念之上"
+    },
+    {
+      "topicId": "mt_ch15_002",
+      "prerequisiteId": "mt_ch7_002",
+      "strength": "hard",
+      "reason": "轴对称性质涉及垂直平分的概念"
+    },
+    {
+      "topicId": "mt_ch15_003",
+      "prerequisiteId": "mt_ch15_002",
+      "strength": "hard",
+      "reason": "画轴对称图形需要利用轴对称性质（作垂线、截等距）"
+    },
+    {
+      "topicId": "mt_ch15_004",
+      "prerequisiteId": "mt_ch15_002",
+      "strength": "hard",
+      "reason": "垂直平分线性质是轴对称性质的直接推论"
+    },
+    {
+      "topicId": "mt_ch15_004",
+      "prerequisiteId": "mt_ch14_002",
+      "strength": "hard",
+      "reason": "垂直平分线性质的证明用SSS全等"
+    },
+    {
+      "topicId": "mt_ch15_005",
+      "prerequisiteId": "mt_ch15_001",
+      "strength": "hard",
+      "reason": "等腰三角形是轴对称图形，性质与轴对称密切相关"
+    },
+    {
+      "topicId": "mt_ch15_005",
+      "prerequisiteId": "mt_ch14_002",
+      "strength": "hard",
+      "reason": "等腰三角形性质的证明需要SSS或SAS全等"
+    },
+    {
+      "topicId": "mt_ch15_006",
+      "prerequisiteId": "mt_ch15_005",
+      "strength": "hard",
+      "reason": "等边三角形是特殊的等腰三角形，性质在等腰基础上进一步推导"
+    },
+    {
+      "topicId": "mt_ch16_001",
+      "prerequisiteId": "mt_ch1_016",
+      "strength": "hard",
+      "reason": "幂运算法则是有理数乘方运算的推广"
+    },
+    {
+      "topicId": "mt_ch16_002",
+      "prerequisiteId": "mt_ch16_001",
+      "strength": "hard",
+      "reason": "整式乘法需要用到幂的运算法则"
+    },
+    {
+      "topicId": "mt_ch16_002",
+      "prerequisiteId": "mt_ch2_005",
+      "strength": "hard",
+      "reason": "多项式乘法需要合并同类项"
+    },
+    {
+      "topicId": "mt_ch16_003",
+      "prerequisiteId": "mt_ch16_002",
+      "strength": "hard",
+      "reason": "平方差公式是多项式乘法的特殊情形"
+    },
+    {
+      "topicId": "mt_ch16_004",
+      "prerequisiteId": "mt_ch16_002",
+      "strength": "hard",
+      "reason": "完全平方公式是多项式乘法的特殊情形"
+    },
+    {
+      "topicId": "mt_ch17_001",
+      "prerequisiteId": "mt_ch16_002",
+      "strength": "hard",
+      "reason": "因式分解是整式乘法的逆运算"
+    },
+    {
+      "topicId": "mt_ch17_002",
+      "prerequisiteId": "mt_ch17_001",
+      "strength": "hard",
+      "reason": "公式法在提公因式法之后使用，是因式分解的进一步方法"
+    },
+    {
+      "topicId": "mt_ch17_002",
+      "prerequisiteId": "mt_ch16_003",
+      "strength": "hard",
+      "reason": "用平方差公式分解因式是平方差公式的逆用"
+    },
+    {
+      "topicId": "mt_ch17_002",
+      "prerequisiteId": "mt_ch16_004",
+      "strength": "hard",
+      "reason": "用完全平方公式分解因式是完全平方公式的逆用"
+    },
+    {
+      "topicId": "mt_ch18_001",
+      "prerequisiteId": "mt_ch17_001",
+      "strength": "hard",
+      "reason": "分式的约分需要因式分解"
+    },
+    {
+      "topicId": "mt_ch18_002",
+      "prerequisiteId": "mt_ch18_001",
+      "strength": "hard",
+      "reason": "分式乘除需先掌握分式概念和约分"
+    },
+    {
+      "topicId": "mt_ch18_003",
+      "prerequisiteId": "mt_ch18_001",
+      "strength": "hard",
+      "reason": "分式加减需要通分，通分基于分式基本性质"
+    },
+    {
+      "topicId": "mt_ch18_003",
+      "prerequisiteId": "mt_ch18_002",
+      "strength": "soft",
+      "reason": "分式加减运算一般在乘除之后学习"
+    },
+    {
+      "topicId": "mt_ch18_004",
+      "prerequisiteId": "mt_ch16_001",
+      "strength": "hard",
+      "reason": "整数指数幂是正整数指数幂的扩展"
+    },
+    {
+      "topicId": "mt_ch18_004",
+      "prerequisiteId": "mt_ch18_001",
+      "strength": "soft",
+      "reason": "负指数幂与分式的关系：a^(-n)=1/a^n"
+    },
+    {
+      "topicId": "mt_ch18_005",
+      "prerequisiteId": "mt_ch18_003",
+      "strength": "hard",
+      "reason": "解分式方程需要分式加减运算能力"
+    },
+    {
+      "topicId": "mt_ch18_005",
+      "prerequisiteId": "mt_ch3_003",
+      "strength": "hard",
+      "reason": "分式方程去分母后转化为一元一次方程（或整式方程）求解"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "pep-math-8up-v1",
+  "textbook": "（根据2022年版课程标准修订）义务教育教科书·数学八年级上册",
+  "publisher": "人民教育出版社",
+  "grade": "8-up",
+  "stats": {
+    "topics": 28,
+    "dependencies": 41,
+    "clusters": 9,
+    "standards": 19
+  },
+  "chapters": [
+    {"chapter": 13, "title": "三角形", "topics": 5},
+    {"chapter": 14, "title": "全等三角形", "topics": 6},
+    {"chapter": 15, "title": "轴对称", "topics": 6},
+    {"chapter": 16, "title": "整式的乘法", "topics": 4},
+    {"chapter": 17, "title": "因式分解", "topics": 2},
+    {"chapter": 18, "title": "分式", "topics": 5}
+  ],
+  "typeDistribution": {
+    "CONCEPTUAL": 11,
+    "PROCEDURAL": 17,
+    "REPRESENTATIONAL": 0
+  }
+}

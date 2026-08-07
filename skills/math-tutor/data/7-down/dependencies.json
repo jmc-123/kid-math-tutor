@@ -1,0 +1,257 @@
+{
+  "version": "pep-math-7down-v1",
+  "dependencies": [
+    {
+      "topicId": "mt_ch7_002",
+      "prerequisiteId": "mt_ch7_001",
+      "strength": "hard",
+      "reason": "垂直是相交的特殊情况，需先理解相交线中的角关系"
+    },
+    {
+      "topicId": "mt_ch7_003",
+      "prerequisiteId": "mt_ch7_001",
+      "strength": "hard",
+      "reason": "三线八角是两条直线被第三条直线所截的情况，需先理解两条直线相交的角"
+    },
+    {
+      "topicId": "mt_ch7_004",
+      "prerequisiteId": "mt_ch7_003",
+      "strength": "soft",
+      "reason": "平行线的判定和性质依赖三线八角的概念"
+    },
+    {
+      "topicId": "mt_ch7_005",
+      "prerequisiteId": "mt_ch7_003",
+      "strength": "hard",
+      "reason": "平行线判定条件就是同位角相等、内错角相等、同旁内角互补"
+    },
+    {
+      "topicId": "mt_ch7_005",
+      "prerequisiteId": "mt_ch7_004",
+      "strength": "hard",
+      "reason": "必须理解平行的概念才能判定平行"
+    },
+    {
+      "topicId": "mt_ch7_006",
+      "prerequisiteId": "mt_ch7_005",
+      "strength": "hard",
+      "reason": "性质与判定互逆，需先掌握判定方法才能理解性质的使用场景"
+    },
+    {
+      "topicId": "mt_ch7_006",
+      "prerequisiteId": "mt_ch7_003",
+      "strength": "hard",
+      "reason": "性质的表述基于同位角、内错角、同旁内角"
+    },
+    {
+      "topicId": "mt_ch7_007",
+      "prerequisiteId": "mt_ch7_005",
+      "strength": "soft",
+      "reason": "命题和证明的引入以平行线判定定理为例"
+    },
+    {
+      "topicId": "mt_ch7_007",
+      "prerequisiteId": "mt_ch7_006",
+      "strength": "soft",
+      "reason": "命题和证明的引入以平行线性质定理为例"
+    },
+    {
+      "topicId": "mt_ch7_008",
+      "prerequisiteId": "mt_ch7_004",
+      "strength": "soft",
+      "reason": "平移的性质（对应点连线平行）需要平行概念"
+    },
+    {
+      "topicId": "mt_ch8_001",
+      "prerequisiteId": "mt_ch1_016",
+      "strength": "hard",
+      "reason": "平方根是乘方的逆运算，需先掌握有理数乘方"
+    },
+    {
+      "topicId": "mt_ch8_002",
+      "prerequisiteId": "mt_ch8_001",
+      "strength": "hard",
+      "reason": "立方根概念类比平方根，需先理解平方根"
+    },
+    {
+      "topicId": "mt_ch8_003",
+      "prerequisiteId": "mt_ch8_001",
+      "strength": "hard",
+      "reason": "无理数的引入源于√2不是有理数，需理解平方根"
+    },
+    {
+      "topicId": "mt_ch8_003",
+      "prerequisiteId": "mt_ch8_002",
+      "strength": "soft",
+      "reason": "实数分类包含立方根产生的无理数"
+    },
+    {
+      "topicId": "mt_ch8_003",
+      "prerequisiteId": "mt_ch1_003",
+      "strength": "hard",
+      "reason": "实数是有理数的扩展，需先掌握有理数分类"
+    },
+    {
+      "topicId": "mt_ch8_004",
+      "prerequisiteId": "mt_ch8_003",
+      "strength": "hard",
+      "reason": "实数运算在实数概念基础上进行"
+    },
+    {
+      "topicId": "mt_ch8_004",
+      "prerequisiteId": "mt_ch8_001",
+      "strength": "hard",
+      "reason": "化简根号需要平方根的性质"
+    },
+    {
+      "topicId": "mt_ch9_001",
+      "prerequisiteId": "mt_ch1_004",
+      "strength": "hard",
+      "reason": "坐标系建立在数轴基础上，x轴y轴都是数轴"
+    },
+    {
+      "topicId": "mt_ch9_001",
+      "prerequisiteId": "mt_ch8_003",
+      "strength": "soft",
+      "reason": "坐标可以是实数，需理解实数与数轴的对应"
+    },
+    {
+      "topicId": "mt_ch9_002",
+      "prerequisiteId": "mt_ch9_001",
+      "strength": "hard",
+      "reason": "用坐标描述几何图形必须先掌握坐标系"
+    },
+    {
+      "topicId": "mt_ch9_003",
+      "prerequisiteId": "mt_ch9_001",
+      "strength": "hard",
+      "reason": "用坐标表示地理位置需要坐标系基础"
+    },
+    {
+      "topicId": "mt_ch9_004",
+      "prerequisiteId": "mt_ch9_001",
+      "strength": "hard",
+      "reason": "用坐标表示平移需要坐标系基础"
+    },
+    {
+      "topicId": "mt_ch9_004",
+      "prerequisiteId": "mt_ch7_008",
+      "strength": "hard",
+      "reason": "坐标平移是平移变换在坐标系中的代数表达"
+    },
+    {
+      "topicId": "mt_ch10_001",
+      "prerequisiteId": "mt_ch3_001",
+      "strength": "hard",
+      "reason": "二元一次方程组是一元一次方程概念的推广，需先掌握方程基本概念"
+    },
+    {
+      "topicId": "mt_ch10_002",
+      "prerequisiteId": "mt_ch10_001",
+      "strength": "hard",
+      "reason": "代入法需先理解方程组和解的概念"
+    },
+    {
+      "topicId": "mt_ch10_002",
+      "prerequisiteId": "mt_ch3_003",
+      "strength": "hard",
+      "reason": "代入消元最终转化为解一元一次方程"
+    },
+    {
+      "topicId": "mt_ch10_003",
+      "prerequisiteId": "mt_ch10_001",
+      "strength": "hard",
+      "reason": "加减法需先理解方程组概念"
+    },
+    {
+      "topicId": "mt_ch10_003",
+      "prerequisiteId": "mt_ch10_002",
+      "strength": "soft",
+      "reason": "加减法是代入法之外的另一种消元方法，通常在代入法后学习"
+    },
+    {
+      "topicId": "mt_ch10_004",
+      "prerequisiteId": "mt_ch10_002",
+      "strength": "hard",
+      "reason": "应用题需要能解方程组"
+    },
+    {
+      "topicId": "mt_ch10_004",
+      "prerequisiteId": "mt_ch10_003",
+      "strength": "hard",
+      "reason": "应用题需要能用加减法或代入法解方程组"
+    },
+    {
+      "topicId": "mt_ch10_005",
+      "prerequisiteId": "mt_ch10_002",
+      "strength": "hard",
+      "reason": "三元方程组需通过消元转化为二元方程组"
+    },
+    {
+      "topicId": "mt_ch10_005",
+      "prerequisiteId": "mt_ch10_003",
+      "strength": "hard",
+      "reason": "解三元需熟练掌握加减消元法"
+    },
+    {
+      "topicId": "mt_ch11_001",
+      "prerequisiteId": "mt_ch3_001",
+      "strength": "soft",
+      "reason": "不等式概念类比方程概念引入"
+    },
+    {
+      "topicId": "mt_ch11_002",
+      "prerequisiteId": "mt_ch11_001",
+      "strength": "hard",
+      "reason": "不等式性质是对不等式进行变形的基础"
+    },
+    {
+      "topicId": "mt_ch11_002",
+      "prerequisiteId": "mt_ch3_002",
+      "strength": "soft",
+      "reason": "不等式性质类比等式性质，需先理解等式性质"
+    },
+    {
+      "topicId": "mt_ch11_003",
+      "prerequisiteId": "mt_ch11_002",
+      "strength": "hard",
+      "reason": "解不等式的每一步变形都依赖不等式性质"
+    },
+    {
+      "topicId": "mt_ch11_003",
+      "prerequisiteId": "mt_ch3_003",
+      "strength": "hard",
+      "reason": "解不等式的步骤仿照解一元一次方程"
+    },
+    {
+      "topicId": "mt_ch11_004",
+      "prerequisiteId": "mt_ch11_003",
+      "strength": "hard",
+      "reason": "不等式组的解需要先能解单个不等式"
+    },
+    {
+      "topicId": "mt_ch11_004",
+      "prerequisiteId": "mt_ch11_001",
+      "strength": "hard",
+      "reason": "不等式组的解集是各解集的交集，需理解解集概念"
+    },
+    {
+      "topicId": "mt_ch12_002",
+      "prerequisiteId": "mt_ch12_001",
+      "strength": "hard",
+      "reason": "讨论抽样方法需先理解全面调查与抽样调查的区别"
+    },
+    {
+      "topicId": "mt_ch12_003",
+      "prerequisiteId": "mt_ch12_001",
+      "strength": "hard",
+      "reason": "统计图是呈现收集到的数据的方式"
+    },
+    {
+      "topicId": "mt_ch12_004",
+      "prerequisiteId": "mt_ch12_003",
+      "strength": "hard",
+      "reason": "频率直方图是统计图的一种，需先了解各种统计图"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "pep-math-9up-v1",
+  "textbook": "义务教育教科书·数学九年级上册（人教版）",
+  "publisher": "人民教育出版社",
+  "grade": "9-up",
+  "stats": {"topics": 18, "dependencies": 25, "clusters": 5, "standards": 13},
+  "chapters": [
+    {"chapter": 21, "title": "一元二次方程", "topics": 5},
+    {"chapter": 22, "title": "二次函数", "topics": 4},
+    {"chapter": 23, "title": "旋转", "topics": 2},
+    {"chapter": 24, "title": "圆", "topics": 4},
+    {"chapter": 25, "title": "概率初步", "topics": 3}
+  ],
+  "typeDistribution": {"CONCEPTUAL": 7, "PROCEDURAL": 10, "REPRESENTATIONAL": 1}
+}

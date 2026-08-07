@@ -1,0 +1,59 @@
+{
+  "version": "pep-math-8up-v1",
+  "clusters": [
+    {
+      "subject": "Mathematics",
+      "domain": "三角形·基本概念与性质",
+      "ageRangeStart": 13,
+      "summary": "系统学习三角形的概念、分类、边的关系、中线/高线/角平分线，以及内角和定理和外角性质。这是初中几何证明的起点，内角和定理的证明展示了'作辅助线'这一核心方法。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "全等三角形·判定方法",
+      "ageRangeStart": 13,
+      "summary": "学习全等三角形的五种判定方法（SSS、SAS、ASA、AAS、HL），这是初中几何证明的核心工具。通过全等来证明线段相等和角相等是最常用的证明策略。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "全等三角形·角平分线",
+      "ageRangeStart": 13,
+      "summary": "利用全等三角形证明角平分线的性质和判定定理。角平分线性质是后续学习三角形内切圆等内容的基础。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "轴对称·概念与性质",
+      "ageRangeStart": 13,
+      "summary": "学习轴对称和轴对称图形的概念，掌握轴对称的基本性质（对应点连线被对称轴垂直平分），以及画轴对称图形和线段垂直平分线的性质。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "轴对称·等腰与等边三角形",
+      "ageRangeStart": 13,
+      "summary": "从轴对称的角度理解等腰三角形的'三线合一'性质，掌握等腰/等边三角形的性质和判定。等腰三角形是最重要的特殊三角形之一。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "整式的乘法",
+      "ageRangeStart": 13,
+      "summary": "从幂的运算法则出发，依次学习单项式乘法、多项式乘法，最终归纳出平方差公式和完全平方公式两个乘法公式。公式是提高运算效率的工具。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "因式分解",
+      "ageRangeStart": 13,
+      "summary": "因式分解是整式乘法的逆运算，掌握提公因式法和公式法（平方差、完全平方）。因式分解是分式化简和方程求解的前置技能。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "分式·概念与运算",
+      "ageRangeStart": 13,
+      "summary": "类比分数建立分式概念，学习分式的四则运算和整数指数幂。分式的约分和通分依赖因式分解能力。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "分式·分式方程",
+      "ageRangeStart": 13,
+      "summary": "学习分式方程的解法（去分母转化为整式方程）和验根。分式方程是方程思想在分式领域的延伸，验根是必不可少的步骤。"
+    }
+  ]
+}

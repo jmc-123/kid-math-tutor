@@ -1,0 +1,25 @@
+{
+  "version": "pep-math-7down-v1",
+  "textbook": "（根据2022年版课程标准修订）义务教育教科书·数学七年级下册",
+  "publisher": "人民教育出版社",
+  "grade": "7-down",
+  "stats": {
+    "topics": 29,
+    "dependencies": 42,
+    "clusters": 10,
+    "standards": 27
+  },
+  "chapters": [
+    {"chapter": 7, "title": "相交线与平行线", "topics": 8},
+    {"chapter": 8, "title": "实数", "topics": 4},
+    {"chapter": 9, "title": "平面直角坐标系", "topics": 4},
+    {"chapter": 10, "title": "二元一次方程组", "topics": 5},
+    {"chapter": 11, "title": "不等式与不等式组", "topics": 4},
+    {"chapter": 12, "title": "数据的收集、整理与描述", "topics": 4}
+  ],
+  "typeDistribution": {
+    "CONCEPTUAL": 15,
+    "PROCEDURAL": 11,
+    "REPRESENTATIONAL": 3
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "version": "pep-math-7down-v1",
+  "clusters": [
+    {
+      "subject": "Mathematics",
+      "domain": "相交线与平行线·线角关系",
+      "ageRangeStart": 12,
+      "summary": "从两条直线相交形成的角关系出发，建立邻补角、对顶角、垂直等概念，进而引入三线八角（同位角、内错角、同旁内角），为平行线的判定和性质提供角度工具。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "相交线与平行线·平行线",
+      "ageRangeStart": 12,
+      "summary": "以平行公理为基础，建立平行线判定定理和性质定理。判定和性质互逆：判定是由角关系推出平行，性质是由平行推出角关系。这是初中几何推理的起点。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "相交线与平行线·命题与变换",
+      "ageRangeStart": 12,
+      "summary": "引入命题、定理、证明的逻辑概念，以及平移变换。这一组知识点培养学生的逻辑推理能力和几何变换思维。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "实数·开方运算",
+      "ageRangeStart": 12,
+      "summary": "从乘方的逆运算引入平方根和立方根，认识无理数，将数系从有理数扩展到实数。这是代数运算体系的重要扩展，也是后续学习函数、方程的数域基础。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "平面直角坐标系",
+      "ageRangeStart": 12,
+      "summary": "用有序数对描述平面内点的位置，建立数与形的桥梁。坐标系是解析几何的起点，为后续学习函数图象、图形变换的代数表达奠定基础。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "二元一次方程组·概念与解法",
+      "ageRangeStart": 12,
+      "summary": "将一元一次方程推广到二元，通过代入消元和加减消元将二元问题转化为一元问题。消元思想是代数的核心方法论。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "二元一次方程组·应用与拓展",
+      "ageRangeStart": 12,
+      "summary": "用方程组解决实际问题，以及三元一次方程组的解法。强化建模能力和消元策略的灵活运用。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "不等式·概念与性质",
+      "ageRangeStart": 12,
+      "summary": "类比方程引入不等式，重点掌握不等式的三条性质（特别是乘除负数变号）。不等式是描述范围和约束条件的工具。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "不等式·求解",
+      "ageRangeStart": 12,
+      "summary": "解一元一次不等式（仿照方程步骤，注意变号）和不等式组（数轴取交集）。口诀'同大取大、同小取小、大小小大取中间'帮助快速确定解集。"
+    },
+    {
+      "subject": "Mathematics",
+      "domain": "数据的收集与描述",
+      "ageRangeStart": 12,
+      "summary": "从统计调查方法（全面调查vs抽样调查）到数据的组织和呈现（统计图、频率直方图）。培养数据意识和用数据说话的能力。"
+    }
+  ]
+}

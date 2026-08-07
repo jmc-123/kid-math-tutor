@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>八年级数学上册 知识图谱</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+                background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+                color: #1565c0;
+                overflow: hidden;
+            }
+
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid #e3f2fd;
+                padding: 8px 16px;
+                z-index: 100;
+                box-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+                height: 44px;
+            }
+
+            .header h1 {
+                color: #1565c0;
+                font-size: 16px;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+
+            .header .subtitle {
+                color: #78909c;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            .controls {
+                position: fixed;
+                top: 54px;
+                left: 12px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border: 1px solid #e3f2fd;
+                border-radius: 10px;
+                padding: 10px;
+                z-index: 90;
+                box-shadow: 0 3px 10px rgba(21, 101, 192, 0.08);
+                width: 168px;
+            }
+
+            .controls h3 {
+                color: #1565c0;
+                font-size: 11px;
+                margin-bottom: 6px;
+                font-weight: 600;
+            }
+
+            .controls select {
+                width: 100%;
+                background: #f5f9ff;
+                border: 1px solid #bbdefb;
+                border-radius: 5px;
+                color: #1565c0;
+                padding: 4px 6px;
+                font-size: 11px;
+                margin-bottom: 5px;
+            }
+
+            .controls .btn-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5px;
+                margin-top: 4px;
+            }
+
+            .controls button {
+                width: 100%;
+                background: linear-gradient(135deg, #42a5f5, #1e88e5);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                padding: 5px 6px;
+                font-size: 10.5px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            .controls button:hover {
+                background: linear-gradient(135deg, #1e88e5, #1565c0);
+                transform: translateY(-1px);
+                box-shadow: 0 3px 10px rgba(30, 136, 229, 0.3);
+            }
+
+            .info-panel {
+                position: fixed;
+                bottom: 12px;
+                right: 12px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border: 1px solid #e3f2fd;
+                border-radius: 10px;
+                padding: 10px 12px;
+                z-index: 90;
+                box-shadow: 0 3px 10px rgba(21, 101, 192, 0.08);
+                width: 168px;
+            }
+
+            .info-panel h3 {
+                color: #1565c0;
+                font-size: 11px;
+                margin-bottom: 6px;
+                font-weight: 600;
+            }
+
+            .info-panel .stat {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2px;
+            }
+
+            .info-panel .stat-label {
+                color: #78909c;
+                font-size: 10.5px;
+            }
+
+            .info-panel .stat-value {
+                color: #1565c0;
+                font-weight: 600;
+                font-size: 10.5px;
+            }
+
+            .legend {
+                position: fixed;
+                bottom: 12px;
+                left: 12px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border: 1px solid #e3f2fd;
+                border-radius: 10px;
+                padding: 8px 12px;
+                z-index: 90;
+                box-shadow: 0 3px 10px rgba(21, 101, 192, 0.08);
+                font-size: 10.5px;
+                display: flex;
+                gap: 12px;
+                color: #455a64;
+            }
+
+            .legend .dot {
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+
+            .tooltip {
+                position: fixed;
+                background: rgba(255, 255, 255, 0.98);
+                border: 2px solid #42a5f5;
+                border-radius: 10px;
+                padding: 12px;
+                z-index: 200;
+                pointer-events: none;
+                backdrop-filter: blur(10px);
+                max-width: 300px;
+                box-shadow: 0 8px 25px rgba(66, 165, 245, 0.2);
+            }
+
+            .tooltip h4 {
+                color: #1565c0;
+                margin-bottom: 6px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .tooltip p {
+                font-size: 11px;
+                line-height: 1.4;
+                color: #555;
+                margin-bottom: 4px;
+            }
+
+            .tooltip .type {
+                display: inline-block;
+                background: linear-gradient(135deg, #42a5f5, #1e88e5);
+                color: white;
+                border-radius: 4px;
+                padding: 2px 6px;
+                font-size: 10px;
+                margin-top: 6px;
+                font-weight: 500;
+            }
+
+            .loading {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(21, 101, 192, 0.2);
+            }
+
+            .loading h2 {
+                color: #1565c0;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border: 4px solid #e3f2fd;
+                border-top: 4px solid #42a5f5;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .node {
+                cursor: pointer;
+                transition: all 0.3s ease;
+                transform-box: fill-box;
+                transform-origin: center;
+            }
+
+            .node:hover {
+                transform: scale(1.15);
+            }
+
+            .node.conceptual {
+                fill: #ff7043;
+            }
+
+            .node.procedural {
+                fill: #26a69a;
+            }
+
+            .node.representational {
+                fill: #42a5f5;
+            }
+
+            .link {
+                stroke: #90caf9;
+                stroke-width: 2;
+                stroke-opacity: 0.6;
+                fill: none;
+            }
+
+            .link.hard {
+                stroke: #1e88e5;
+                stroke-width: 3;
+            }
+
+            .link.soft {
+                stroke: #90caf9;
+                stroke-width: 2;
+                stroke-dasharray: 5, 5;
+            }
+
+            .label {
+                fill: #1565c0;
+                font-size: 9.5px;
+                font-weight: 500;
+                text-anchor: middle;
+                pointer-events: none;
+            }
+
+            .domain-label {
+                fill: #90a4ae;
+                font-size: 8.5px;
+                font-weight: 600;
+                text-anchor: middle;
+                pointer-events: none;
+            }
+
+            .chapter-label {
+                fill: #64b5f6;
+                font-size: 12px;
+                font-weight: 700;
+                text-anchor: middle;
+                pointer-events: none;
+                opacity: 0.9;
+            }
+
+            .controls .hint {
+                color: #90a4ae;
+                font-size: 9.5px;
+                line-height: 1.35;
+                margin-top: 6px;
+                padding-top: 5px;
+                border-top: 1px dashed #e3f2fd;
+            }
+
+            #graph {
+                position: absolute;
+                top: 44px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 44px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>📚 八年级数学上册 知识图谱</h1>
+            <div class="subtitle">人教版2022 · 28个知识点 · 30条依赖关系 · 6大章节</div>
+        </div>
+
+        <div class="loading" id="loading">
+            <h2>正在加载知识图谱...</h2>
+            <div class="spinner"></div>
+        </div>
+
+        <div class="controls">
+            <h3>🎛️ 控制面板</h3>
+            <select id="chapterSelect">
+                <option value="all">全部章节</option>
+                <option value="13">第13章 三角形</option>
+                <option value="14">第14章 全等三角形</option>
+                <option value="15">第15章 轴对称</option>
+                <option value="16">第16章 整式乘法</option>
+                <option value="17">第17章 因式分解</option>
+                <option value="18">第18章 分式</option>
+            </select>
+
+            <select id="typeSelect">
+                <option value="all">全部类型</option>
+                <option value="CONCEPTUAL">概念理解</option>
+                <option value="PROCEDURAL">程序性计算</option>
+                <option value="REPRESENTATIONAL">表征图示</option>
+            </select>
+
+            <select id="domainSelect">
+                <option value="all">全部领域</option>
+                <option value="三角形">三角形</option>
+                <option value="全等三角形">全等三角形</option>
+                <option value="轴对称">轴对称</option>
+                <option value="整式的乘法">整式乘法</option>
+                <option value="因式分解">因式分解</option>
+                <option value="分式">分式</option>
+            </select>
+
+            <button onclick="applyFilters()" style="margin-top: 2px;">✅ 应用筛选</button>
+            <div class="btn-row">
+                <button onclick="resetView()" style="background: linear-gradient(135deg, #66bb6a, #4caf50);">🔄
+                    重置</button>
+                <button onclick="toggleLabels()" style="background: linear-gradient(135deg, #ffa726, #ff9800);">🏷️
+                    标签</button>
+            </div>
+            <button onclick="exportImage()"
+                style="margin-top: 5px; background: linear-gradient(135deg, #ab47bc, #9c27b0);">📸 导出图片</button>
+            <div class="hint">💡 拖拽节点 = 整章移动<br>Shift + 拖拽 = 移动单个节点</div>
+        </div>
+
+        <div class="info-panel">
+            <h3>📊 图谱统计</h3>
+            <div class="stat">
+                <span class="stat-label">知识点总数</span>
+                <span class="stat-value" id="totalNodes">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">依赖关系</span>
+                <span class="stat-value" id="totalLinks">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">概念理解</span>
+                <span class="stat-value" id="conceptualCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">程序性计算</span>
+                <span class="stat-value" id="proceduralCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">表征图示</span>
+                <span class="stat-value" id="representationalCount">0</span>
+            </div>
+        </div>
+
+        <div class="legend">
+            <span><span class="dot" style="background:#ff7043;"></span>概念理解</span>
+            <span><span class="dot" style="background:#26a69a;"></span>程序性计算</span>
+            <span><span class="dot" style="background:#42a5f5;"></span>表征图示</span>
+        </div>
+
+        <svg id="graph"></svg>
+        <div class="tooltip" id="tooltip" style="display: none;"></div>
+
+        <script>
+            // 完整的8年级上数据
+            const graphData = {
+                nodes: [
+                    // 第13章 三角形
+                    { id: "mt_ch13_001", name: "三角形的概念与分类", type: "CONCEPTUAL", domain: "三角形", chapter: 13, centrality: 0.7, description: "三角形的定义、分类（按角、按边）" },
+                    { id: "mt_ch13_002", name: "三角形的边的关系", type: "CONCEPTUAL", domain: "三角形", chapter: 13, centrality: 0.8, description: "三角形两边之和大于第三边" },
+                    { id: "mt_ch13_003", name: "三角形的中线、高线、角平分线", type: "CONCEPTUAL", domain: "三角形", chapter: 13, centrality: 0.75, description: "三角形的重要线段及其性质" },
+                    { id: "mt_ch13_004", name: "三角形内角和定理", type: "PROCEDURAL", domain: "三角形", chapter: 13, centrality: 0.9, description: "三角形内角和等于180°及证明" },
+                    { id: "mt_ch13_005", name: "三角形的外角性质", type: "PROCEDURAL", domain: "三角形", chapter: 13, centrality: 0.8, description: "外角等于不相邻两内角之和" },
+
+                    // 第14章 全等三角形
+                    { id: "mt_ch14_001", name: "全等三角形的概念与性质", type: "CONCEPTUAL", domain: "全等三角形", chapter: 14, centrality: 0.85, description: "全等三角形的定义和性质" },
+                    { id: "mt_ch14_002", name: "三角形全等的判定（SSS）", type: "PROCEDURAL", domain: "全等三角形", chapter: 14, centrality: 0.85, description: "三边对应相等的三角形全等" },
+                    { id: "mt_ch14_003", name: "三角形全等的判定（SAS）", type: "PROCEDURAL", domain: "全等三角形", chapter: 14, centrality: 0.9, description: "两边及夹角对应相等的三角形全等" },
+                    { id: "mt_ch14_004", name: "三角形全等的判定（ASA和AAS）", type: "PROCEDURAL", domain: "全等三角形", chapter: 14, centrality: 0.85, description: "两角及夹边或对边对应相等的三角形全等" },
+                    { id: "mt_ch14_005", name: "直角三角形全等的判定（HL）", type: "PROCEDURAL", domain: "全等三角形", chapter: 14, centrality: 0.75, description: "斜边和直角边对应相等的直角三角形全等" },
+                    { id: "mt_ch14_006", name: "角平分线的性质与判定", type: "PROCEDURAL", domain: "全等三角形", chapter: 14, centrality: 0.8, description: "角平分线的性质定理和判定定理" },
+
+                    // 第15章 轴对称
+                    { id: "mt_ch15_001", name: "轴对称与轴对称图形", type: "CONCEPTUAL", domain: "轴对称", chapter: 15, centrality: 0.8, description: "轴对称的概念和性质" },
+                    { id: "mt_ch15_002", name: "轴对称的性质", type: "CONCEPTUAL", domain: "轴对称", chapter: 15, centrality: 0.85, description: "对称轴垂直平分对应点连线" },
+                    { id: "mt_ch15_003", name: "画轴对称图形", type: "PROCEDURAL", domain: "轴对称", chapter: 15, centrality: 0.7, description: "作图形关于直线的对称图形" },
+                    { id: "mt_ch15_004", name: "线段垂直平分线的性质与判定", type: "CONCEPTUAL", domain: "轴对称", chapter: 15, centrality: 0.8, description: "垂直平分线的性质和判定" },
+                    { id: "mt_ch15_005", name: "等腰三角形的性质与判定", type: "PROCEDURAL", domain: "轴对称", chapter: 15, centrality: 0.9, description: "等腰三角形的性质和判定方法" },
+                    { id: "mt_ch15_006", name: "等边三角形的性质与判定", type: "PROCEDURAL", domain: "轴对称", chapter: 15, centrality: 0.8, description: "等边三角形的特殊性质" },
+
+                    // 第16章 整式乘法
+                    { id: "mt_ch16_001", name: "幂的运算法则", type: "PROCEDURAL", domain: "整式的乘法", chapter: 16, centrality: 0.9, description: "同底数幂乘法、幂的乘方、积的乘方" },
+                    { id: "mt_ch16_002", name: "整式的乘法", type: "PROCEDURAL", domain: "整式的乘法", chapter: 16, centrality: 0.9, description: "单项式乘单项式、单项式乘多项式、多项式乘多项式" },
+                    { id: "mt_ch16_003", name: "平方差公式", type: "PROCEDURAL", domain: "整式的乘法", chapter: 16, centrality: 0.9, description: "(a+b)(a-b)=a²-b²" },
+                    { id: "mt_ch16_004", name: "完全平方公式", type: "PROCEDURAL", domain: "整式的乘法", chapter: 16, centrality: 0.9, description: "(a±b)²=a²±2ab+b²" },
+
+                    // 第17章 因式分解
+                    { id: "mt_ch17_001", name: "因式分解的概念与提公因式法", type: "PROCEDURAL", domain: "因式分解", chapter: 17, centrality: 0.85, description: "因式分解的定义和提公因式法" },
+                    { id: "mt_ch17_002", name: "用公式法分解因式", type: "PROCEDURAL", domain: "因式分解", chapter: 17, centrality: 0.85, description: "平方差公式和完全平方公式分解因式" },
+
+                    // 第18章 分式
+                    { id: "mt_ch18_001", name: "分式的概念与基本性质", type: "CONCEPTUAL", domain: "分式", chapter: 18, centrality: 0.85, description: "分式的定义和基本性质" },
+                    { id: "mt_ch18_002", name: "分式的乘除运算", type: "PROCEDURAL", domain: "分式", chapter: 18, centrality: 0.8, description: "分式的乘法和除法运算" },
+                    { id: "mt_ch18_003", name: "分式的加减运算", type: "PROCEDURAL", domain: "分式", chapter: 18, centrality: 0.85, description: "分式的加减运算和通分" },
+                    { id: "mt_ch18_004", name: "整数指数幂", type: "PROCEDURAL", domain: "分式", chapter: 18, centrality: 0.75, description: "零指数幂和负整数指数幂" },
+                    { id: "mt_ch18_005", name: "分式方程及其应用", type: "PROCEDURAL", domain: "分式", chapter: 18, centrality: 0.85, description: "分式方程的解法和应用" }
+                ],
+                links: [
+                    // 第13章内部依赖
+                    { source: "mt_ch13_001", target: "mt_ch13_002", type: "hard" },
+                    { source: "mt_ch13_001", target: "mt_ch13_003", type: "hard" },
+                    { source: "mt_ch13_001", target: "mt_ch13_004", type: "hard" },
+                    { source: "mt_ch13_004", target: "mt_ch13_005", type: "hard" },
+
+                    // 第14章内部依赖
+                    { source: "mt_ch14_001", target: "mt_ch14_002", type: "hard" },
+                    { source: "mt_ch14_001", target: "mt_ch14_003", type: "hard" },
+                    { source: "mt_ch14_001", target: "mt_ch14_004", type: "hard" },
+                    { source: "mt_ch14_003", target: "mt_ch14_005", type: "hard" },
+                    { source: "mt_ch14_004", target: "mt_ch14_006", type: "hard" },
+                    { source: "mt_ch14_005", target: "mt_ch14_006", type: "hard" },
+
+                    // 跨章节依赖
+                    { source: "mt_ch13_001", target: "mt_ch14_001", type: "hard" },
+                    { source: "mt_ch13_004", target: "mt_ch14_004", type: "soft" },
+
+                    // 第15章内部依赖
+                    { source: "mt_ch15_001", target: "mt_ch15_002", type: "hard" },
+                    { source: "mt_ch15_002", target: "mt_ch15_003", type: "hard" },
+                    { source: "mt_ch15_002", target: "mt_ch15_004", type: "hard" },
+                    { source: "mt_ch15_001", target: "mt_ch15_005", type: "hard" },
+                    { source: "mt_ch15_005", target: "mt_ch15_006", type: "hard" },
+
+                    // 跨章节依赖
+                    { source: "mt_ch14_002", target: "mt_ch15_004", type: "hard" },
+                    { source: "mt_ch14_002", target: "mt_ch15_005", type: "hard" },
+
+                    // 第16章内部依赖
+                    { source: "mt_ch16_001", target: "mt_ch16_002", type: "hard" },
+                    { source: "mt_ch16_002", target: "mt_ch16_003", type: "hard" },
+                    { source: "mt_ch16_002", target: "mt_ch16_004", type: "hard" },
+
+                    // 第17章内部依赖
+                    { source: "mt_ch17_001", target: "mt_ch17_002", type: "hard" },
+
+                    // 跨章节依赖
+                    { source: "mt_ch16_002", target: "mt_ch17_001", type: "hard" },
+                    { source: "mt_ch16_003", target: "mt_ch17_002", type: "hard" },
+                    { source: "mt_ch16_004", target: "mt_ch17_002", type: "hard" },
+
+                    // 第18章内部依赖
+                    { source: "mt_ch18_001", target: "mt_ch18_002", type: "hard" },
+                    { source: "mt_ch18_001", target: "mt_ch18_003", type: "hard" },
+                    { source: "mt_ch18_001", target: "mt_ch18_004", type: "hard" },
+                    { source: "mt_ch18_003", target: "mt_ch18_005", type: "hard" }
+                ]
+            };
+
+            // 全局变量
+            let svg, simulation, nodes, links, chapterLabels;
+            let width = window.innerWidth;
+            let height = Math.max(300, window.innerHeight - 44);
+            let showLabels = true;
+            let filteredData = { ...graphData };
+            let chapters = [];
+            let chapterCenters = {};
+            let dragMode = null; // 'group' | 'single'
+
+            // 安全边距：避开四角固定面板（左上控制面板、左下图例、右下统计）
+            const MARGIN = { left: 265, top: 50, right: 245, bottom: 150 };
+
+            // 计算各章节子图的中心位置（网格布局，居中分布）
+            function computeChapterCenters() {
+                const areaLeft = MARGIN.left;
+                const areaTop = MARGIN.top;
+                const areaRight = width - MARGIN.right;
+                const areaBottom = height - MARGIN.bottom;
+                const n = chapters.length;
+                const cols = n <= 2 ? n : (n <= 4 ? 2 : 3);
+                const rows = Math.ceil(n / cols);
+                const centers = {};
+                chapters.forEach((ch, i) => {
+                    const col = i % cols;
+                    const row = Math.floor(i / cols);
+                    centers[ch] = {
+                        x: areaLeft + (col + 0.5) * (areaRight - areaLeft) / cols,
+                        y: areaTop + (row + 0.5) * (areaBottom - areaTop) / rows
+                    };
+                });
+                return centers;
+            }
+
+            // 初始化
+            function init() {
+                document.getElementById('loading').style.display = 'none';
+
+                // 清除上次拖拽留下的固定位置，避免节点"卡死"
+                filteredData.nodes.forEach(n => { n.fx = null; n.fy = null; });
+
+                svg = d3.select("#graph")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                // 章节列表与子图中心
+                chapters = [...new Set(filteredData.nodes.map(n => n.chapter))].sort((a, b) => a - b);
+                chapterCenters = computeChapterCenters();
+
+                // 创建力导向图（按章节聚类，使各子图居中分布）
+                simulation = d3.forceSimulation(filteredData.nodes)
+                    .force("link", d3.forceLink(filteredData.links).id(d => d.id).distance(70))
+                    .force("charge", d3.forceManyBody().strength(-200))
+                    .force("x", d3.forceX(d => chapterCenters[d.chapter].x).strength(0.08))
+                    .force("y", d3.forceY(d => chapterCenters[d.chapter].y).strength(0.12))
+                    .force("collision", d3.forceCollide().radius(d => 15 + d.centrality * 9 + 8));
+
+                // 绘制连线
+                links = svg.append("g")
+                    .selectAll("line")
+                    .data(filteredData.links)
+                    .enter().append("line")
+                    .attr("class", d => `link ${d.type}`);
+
+                // 绘制节点
+                nodes = svg.append("g")
+                    .selectAll("circle")
+                    .data(filteredData.nodes)
+                    .enter().append("circle")
+                    .attr("class", d => `node ${d.type.toLowerCase()}`)
+                    .attr("r", d => 15 + d.centrality * 9)
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended))
+                    .on("mouseover", showTooltip)
+                    .on("mouseout", hideTooltip)
+                    .on("click", showNodeDetails);
+
+                // 添加标签（节点下方，避免与圆圈重叠）
+                const labels = svg.append("g")
+                    .selectAll("text")
+                    .data(filteredData.nodes)
+                    .enter().append("text")
+                    .attr("class", "label")
+                    .text(d => d.name);
+
+                // 章节子图标题（跟随各章节点质心）
+                const chapterName = ch => {
+                    const node = filteredData.nodes.find(n => n.chapter === ch);
+                    return node ? node.domain : '';
+                };
+                chapterLabels = svg.append("g")
+                    .selectAll("text.chapter-label")
+                    .data(chapters)
+                    .enter().append("text")
+                    .attr("class", "chapter-label")
+                    .text(ch => `第${ch}章 · ${chapterName(ch)}`);
+
+                // 更新位置（并限制节点不进入四角固定面板区域）
+                simulation.on("tick", () => {
+                    filteredData.nodes.forEach(d => {
+                        const r = 15 + d.centrality * 9;
+                        d.x = Math.max(MARGIN.left, Math.min(width - MARGIN.right, d.x));
+                        d.y = Math.max(MARGIN.top + r, Math.min(height - MARGIN.bottom, d.y));
+                    });
+
+                    links
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+
+                    nodes
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y);
+
+                    labels
+                        .attr("x", d => d.x)
+                        .attr("y", d => d.y + 15 + d.centrality * 9 + 11);
+
+                    chapterLabels
+                        .attr("x", ch => {
+                            const ns = filteredData.nodes.filter(n => n.chapter === ch);
+                            return ns.reduce((s, n) => s + n.x, 0) / ns.length;
+                        })
+                        .attr("y", ch => {
+                            const ns = filteredData.nodes.filter(n => n.chapter === ch);
+                            return Math.min(...ns.map(n => n.y - (15 + n.centrality * 9))) - 14;
+                        });
+                });
+
+                updateStats();
+            }
+
+            // 拖拽功能（默认整章拖动；Shift+拖拽只移动单个节点）
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                hideTooltip();
+                dragMode = (event.sourceEvent && event.sourceEvent.shiftKey) ? 'single' : 'group';
+                if (dragMode === 'group') {
+                    filteredData.nodes.forEach(n => {
+                        if (n.chapter === d.chapter) { n.fx = n.x; n.fy = n.y; }
+                    });
+                } else {
+                    d.fx = d.x;
+                    d.fy = d.y;
+                }
+            }
+
+            function dragged(event, d) {
+                if (dragMode === 'group') {
+                    const dx = event.x - d.fx;
+                    const dy = event.y - d.fy;
+                    filteredData.nodes.forEach(n => {
+                        if (n.chapter === d.chapter) { n.fx += dx; n.fy += dy; }
+                    });
+                } else {
+                    d.fx = event.x;
+                    d.fy = event.y;
+                }
+            }
+
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                dragMode = null;
+            }
+
+            // 工具提示
+            function showTooltip(event, d) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+                <h4>${d.name}</h4>
+                <p><strong>领域:</strong> ${d.domain}</p>
+                <p><strong>章节:</strong> 第${d.chapter}章</p>
+                <p><strong>描述:</strong> ${d.description}</p>
+                <span class="type">${getTypeLabel(d.type)}</span>
+            `;
+                tooltip.style.display = 'block';
+                // 锚定到节点位置（而非鼠标），避免跳动；SVG 上方有 44px 页头
+                const r = 15 + d.centrality * 9;
+                const nodeX = d.x;
+                const nodeY = d.y + 44;
+                const tw = tooltip.offsetWidth;
+                const th = tooltip.offsetHeight;
+                let tx = nodeX + r + 12;
+                let ty = nodeY - th / 2;
+                if (tx + tw > window.innerWidth - 8) tx = nodeX - r - 12 - tw;
+                if (ty + th > window.innerHeight - 8) ty = window.innerHeight - th - 8;
+                if (ty < 52) ty = 52;
+                tooltip.style.left = tx + 'px';
+                tooltip.style.top = ty + 'px';
+            }
+
+            function hideTooltip() {
+                document.getElementById('tooltip').style.display = 'none';
+            }
+
+            // 获取类型标签
+            function getTypeLabel(type) {
+                switch (type) {
+                    case 'CONCEPTUAL': return '概念理解';
+                    case 'PROCEDURAL': return '程序性计算';
+                    case 'REPRESENTATIONAL': return '表征图示';
+                    default: return '未知';
+                }
+            }
+
+            // 显示节点详情
+            function showNodeDetails(event, d) {
+                const prerequisites = filteredData.links.filter(l => l.target.id === d.id).map(l => {
+                    const source = filteredData.nodes.find(n => n.id === l.source.id);
+                    return source ? source.name : l.source.id;
+                });
+
+                const successors = filteredData.links.filter(l => l.source.id === d.id).map(l => {
+                    const target = filteredData.nodes.find(n => n.id === l.target.id);
+                    return target ? target.name : l.target.id;
+                });
+
+                alert(`📖 知识点详情
+
+名称: ${d.name}
+类型: ${getTypeLabel(d.type)}
+领域: ${d.domain}
+章节: 第${d.chapter}章
+中心度: ${d.centrality}
+描述: ${d.description}
+
+前置知识点: ${prerequisites.join(', ') || '无'}
+后置知识点: ${successors.join(', ') || '无'}
+
+💡 学习建议：建议先掌握前置知识点，再学习本知识点，最后学习后置知识点。`);
+            }
+
+            // 更新统计信息
+            function updateStats() {
+                const conceptualCount = filteredData.nodes.filter(n => n.type === 'CONCEPTUAL').length;
+                const proceduralCount = filteredData.nodes.filter(n => n.type === 'PROCEDURAL').length;
+                const representationalCount = filteredData.nodes.filter(n => n.type === 'REPRESENTATIONAL').length;
+
+                document.getElementById('totalNodes').textContent = filteredData.nodes.length;
+                document.getElementById('totalLinks').textContent = filteredData.links.length;
+                document.getElementById('conceptualCount').textContent = conceptualCount;
+                document.getElementById('proceduralCount').textContent = proceduralCount;
+                document.getElementById('representationalCount').textContent = representationalCount;
+            }
+
+            // 应用筛选
+            function applyFilters() {
+                const chapter = document.getElementById('chapterSelect').value;
+                const type = document.getElementById('typeSelect').value;
+                const domain = document.getElementById('domainSelect').value;
+
+                // 筛选节点
+                filteredData.nodes = graphData.nodes.filter(node => {
+                    const chapterMatch = chapter === 'all' || node.chapter.toString() === chapter;
+                    const typeMatch = type === 'all' || node.type === type;
+                    const domainMatch = domain === 'all' || node.domain === domain;
+                    return chapterMatch && typeMatch && domainMatch;
+                });
+
+                // 筛选连线
+                const nodeIds = new Set(filteredData.nodes.map(n => n.id));
+                filteredData.links = graphData.links.filter(link =>
+                    nodeIds.has(link.source) && nodeIds.has(link.target)
+                );
+
+                // 重新初始化图形
+                svg.selectAll("*").remove();
+                init();
+            }
+
+            // 重置视图
+            function resetView() {
+                document.getElementById('chapterSelect').value = 'all';
+                document.getElementById('typeSelect').value = 'all';
+                document.getElementById('domainSelect').value = 'all';
+                filteredData = { ...graphData };
+                svg.selectAll("*").remove();
+                init();
+            }
+
+            // 切换标签
+            function toggleLabels() {
+                showLabels = !showLabels;
+                svg.selectAll(".label").style("display", showLabels ? "block" : "none");
+            }
+
+            // 导出图片
+            function exportImage() {
+                const svgElement = document.querySelector("#graph");
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+                const img = new Image();
+
+                canvas.width = width;
+                canvas.height = height;
+
+                img.onload = function () {
+                    ctx.fillStyle = "#e3f2fd";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(img, 0, 0);
+
+                    const link = document.createElement("a");
+                    link.download = "八年级数学上册知识图谱.png";
+                    link.href = canvas.toDataURL();
+                    link.click();
+                };
+
+                img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
+            }
+
+            // 窗口大小调整
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = Math.max(300, window.innerHeight - 44);
+                svg.attr("width", width).attr("height", height);
+                chapterCenters = computeChapterCenters();
+                simulation.force("x", d3.forceX(d => chapterCenters[d.chapter].x).strength(0.08));
+                simulation.force("y", d3.forceY(d => chapterCenters[d.chapter].y).strength(0.12));
+                simulation.alpha(0.6).restart();
+            });
+
+            // 页面加载完成后初始化
+            window.addEventListener('load', init);
+        </script>
+
+        <!-- 引入D3.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "version": "pep-math-8down-v1",
+  "textbook": "（根据2022年版课程标准修订）义务教育教科书·数学八年级下册",
+  "publisher": "人民教育出版社",
+  "grade": "8-down",
+  "stats": {"topics": 19, "dependencies": 27, "clusters": 6, "standards": 17},
+  "chapters": [
+    {"chapter": 19, "title": "二次根式", "topics": 3},
+    {"chapter": 20, "title": "勾股定理", "topics": 2},
+    {"chapter": 21, "title": "四边形", "topics": 5},
+    {"chapter": 22, "title": "函数", "topics": 2},
+    {"chapter": 23, "title": "一次函数", "topics": 4},
+    {"chapter": 24, "title": "数据的分析", "topics": 3}
+  ],
+  "typeDistribution": {"CONCEPTUAL": 7, "PROCEDURAL": 10, "REPRESENTATIONAL": 2}
+}

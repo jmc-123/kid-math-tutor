@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>七年级数学上册 知识图谱</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box
+            }
+
+            body {
+                font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+                background: #080c1f;
+                color: #d0d8f0;
+                overflow: hidden
+            }
+
+            canvas {
+                display: block;
+                cursor: grab
+            }
+
+            canvas:active {
+                cursor: grabbing
+            }
+
+            #ctrl {
+                position: fixed;
+                top: 16px;
+                right: 16px;
+                background: rgba(12, 16, 40, 0.92);
+                border: 1px solid rgba(100, 140, 255, 0.18);
+                border-radius: 14px;
+                padding: 14px 16px;
+                z-index: 60;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                backdrop-filter: blur(8px)
+            }
+
+            #ctrl button {
+                background: rgba(80, 120, 255, 0.15);
+                border: 1px solid rgba(100, 140, 255, 0.25);
+                border-radius: 8px;
+                color: #a0b8ff;
+                padding: 8px 12px;
+                font-size: 13px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                text-align: left;
+                font-weight: 500
+            }
+
+            #ctrl button:hover {
+                background: rgba(80, 120, 255, 0.25);
+                border-color: rgba(100, 140, 255, 0.4);
+                color: #c0d8ff
+            }
+
+            #ctrl button:active {
+                transform: scale(0.98)
+            }
+
+            #info {
+                position: fixed;
+                bottom: 16px;
+                left: 16px;
+                background: rgba(12, 16, 40, 0.92);
+                border: 1px solid rgba(100, 140, 255, 0.18);
+                border-radius: 14px;
+                padding: 14px 16px;
+                z-index: 60;
+                backdrop-filter: blur(8px);
+                max-width: 300px
+            }
+
+            #info h3 {
+                margin-bottom: 8px;
+                color: #a0b8ff;
+                font-size: 14px;
+                font-weight: 600
+            }
+
+            #info p {
+                font-size: 12px;
+                line-height: 1.5;
+                color: #8898c0;
+                margin-bottom: 6px
+            }
+
+            #info .tag {
+                display: inline-block;
+                background: rgba(80, 120, 255, 0.15);
+                border: 1px solid rgba(100, 140, 255, 0.25);
+                border-radius: 4px;
+                padding: 2px 6px;
+                font-size: 11px;
+                color: #a0b8ff;
+                margin-right: 4px;
+                margin-bottom: 4px
+            }
+
+            .loading {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                z-index: 100
+            }
+
+            .loading h2 {
+                color: #a0b8ff;
+                margin-bottom: 16px;
+                font-size: 18px
+            }
+
+            .loading .spinner {
+                width: 40px;
+                height: 40px;
+                border: 3px solid rgba(100, 140, 255, 0.2);
+                border-top: 3px solid #6488ff;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            .tooltip {
+                position: fixed;
+                background: rgba(12, 16, 40, 0.95);
+                border: 1px solid rgba(100, 140, 255, 0.3);
+                border-radius: 8px;
+                padding: 12px;
+                z-index: 70;
+                pointer-events: none;
+                backdrop-filter: blur(8px);
+                max-width: 250px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3)
+            }
+
+            .tooltip h4 {
+                color: #a0b8ff;
+                margin-bottom: 6px;
+                font-size: 13px;
+                font-weight: 600
+            }
+
+            .tooltip p {
+                font-size: 11px;
+                line-height: 1.4;
+                color: #8898c0;
+                margin-bottom: 4px
+            }
+
+            .tooltip .type {
+                display: inline-block;
+                background: rgba(80, 120, 255, 0.15);
+                border: 1px solid rgba(100, 140, 255, 0.25);
+                border-radius: 4px;
+                padding: 2px 6px;
+                font-size: 10px;
+                color: #a0b8ff;
+                margin-top: 6px
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="loading" id="loading">
+            <h2>正在加载知识图谱...</h2>
+            <div class="spinner"></div>
+        </div>
+
+        <canvas id="graph"></canvas>
+
+        <div id="ctrl">
+            <button onclick="resetView()">🔄 重置视图</button>
+            <button onclick="togglePhysics()">⚡ 切换物理引擎</button>
+            <button onclick="toggleLabels()">🏷️ 切换标签</button>
+            <button onclick="exportImage()">📸 导出图片</button>
+            <button onclick="showHelp()">❓ 帮助</button>
+        </div>
+
+        <div id="info">
+            <h3>📊 知识图谱信息</h3>
+            <p><strong>知识点:</strong> <span id="nodeCount">0</span></p>
+            <p><strong>依赖关系:</strong> <span id="edgeCount">0</span></p>
+            <p><strong>当前年级:</strong> <span id="currentGrade">七年级上册</span></p>
+            <div id="tags"></div>
+        </div>
+
+        <div class="tooltip" id="tooltip" style="display: none;"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+        <script>
+            // 全局变量
+            let svg, simulation, nodes, links;
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            let physicsEnabled = true;
+            let showLabels = true;
+
+            // 知识点数据（示例数据）
+            const graphData = {
+                nodes: [
+                    {
+                        id: "mt_ch07_001",
+                        name: "有理数的概念",
+                        type: "CONCEPTUAL",
+                        domain: "数与代数",
+                        grade: "7-up",
+                        description: "理解有理数的定义，包括正数、负数和零",
+                        centrality: 0.9,
+                        x: width / 2,
+                        y: height / 2
+                    },
+                    {
+                        id: "mt_ch07_002",
+                        name: "数轴",
+                        type: "REPRESENTATIONAL",
+                        domain: "数与代数",
+                        grade: "7-up",
+                        description: "掌握数轴的画法和表示方法",
+                        centrality: 0.8,
+                        x: width / 2 + 150,
+                        y: height / 2
+                    },
+                    {
+                        id: "mt_ch07_003",
+                        name: "相反数",
+                        type: "CONCEPTUAL",
+                        domain: "数与代数",
+                        grade: "7-up",
+                        description: "理解相反数的概念和性质",
+                        centrality: 0.7,
+                        x: width / 2 - 150,
+                        y: height / 2
+                    }
+                ],
+                links: [
+                    {
+                        source: "mt_ch07_001",
+                        target: "mt_ch07_002",
+                        type: "prerequisite"
+                    },
+                    {
+                        source: "mt_ch07_001",
+                        target: "mt_ch07_003",
+                        type: "prerequisite"
+                    }
+                ]
+            };
+
+            // 初始化画布
+            function init() {
+                // 移除加载提示
+                document.getElementById('loading').style.display = 'none';
+
+                // 创建SVG
+                svg = d3.select("#graph")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                // 添加缩放功能
+                const g = svg.append("g");
+
+                svg.call(d3.zoom()
+                    .scaleExtent([0.1, 4])
+                    .on("zoom", (event) => {
+                        g.attr("transform", event.transform);
+                    }));
+
+                // 创建力导向图
+                simulation = d3.forceSimulation(graphData.nodes)
+                    .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(100))
+                    .force("charge", d3.forceManyBody().strength(-300))
+                    .force("center", d3.forceCenter(width / 2, height / 2))
+                    .force("collision", d3.forceCollide().radius(30));
+
+                // 绘制连线
+                const link = g.append("g")
+                    .selectAll("line")
+                    .data(graphData.links)
+                    .enter().append("line")
+                    .attr("stroke", "#4a90e2")
+                    .attr("stroke-width", 2)
+                    .attr("stroke-opacity", 0.6);
+
+                // 绘制节点
+                const node = g.append("g")
+                    .selectAll("circle")
+                    .data(graphData.nodes)
+                    .enter().append("circle")
+                    .attr("r", d => 15 + d.centrality * 10)
+                    .attr("fill", d => getNodeColor(d.type))
+                    .attr("stroke", "#fff")
+                    .attr("stroke-width", 2)
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended))
+                    .on("mouseover", showTooltip)
+                    .on("mouseout", hideTooltip);
+
+                // 添加标签
+                const labels = g.append("g")
+                    .selectAll("text")
+                    .data(graphData.nodes)
+                    .enter().append("text")
+                    .text(d => d.name)
+                    .attr("font-size", "12px")
+                    .attr("fill", "#fff")
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "0.35em")
+                    .style("pointer-events", "none");
+
+                // 更新位置
+                simulation.on("tick", () => {
+                    link
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+
+                    node
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y);
+
+                    labels
+                        .attr("x", d => d.x)
+                        .attr("y", d => d.y + 25);
+                });
+
+                // 更新信息面板
+                updateInfo();
+            }
+
+            // 获取节点颜色
+            function getNodeColor(type) {
+                switch (type) {
+                    case "CONCEPTUAL": return "#ff6b6b";
+                    case "PROCEDURAL": return "#4ecdc4";
+                    case "REPRESENTATIONAL": return "#45b7d1";
+                    default: return "#95a5a6";
+                }
+            }
+
+            // 拖拽功能
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                if (!physicsEnabled) {
+                    d.fx = null;
+                    d.fy = null;
+                }
+            }
+
+            // 工具提示
+            function showTooltip(event, d) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+          <h4>${d.name}</h4>
+          <p><strong>领域:</strong> ${d.domain}</p>
+          <p><strong>描述:</strong> ${d.description}</p>
+          <span class="type">${getTypeLabel(d.type)}</span>
+        `;
+                tooltip.style.display = 'block';
+                tooltip.style.left = (event.pageX + 10) + 'px';
+                tooltip.style.top = (event.pageY - 10) + 'px';
+            }
+
+            function hideTooltip() {
+                document.getElementById('tooltip').style.display = 'none';
+            }
+
+            // 获取类型标签
+            function getTypeLabel(type) {
+                switch (type) {
+                    case "CONCEPTUAL": return "概念理解";
+                    case "PROCEDURAL": return "程序性计算";
+                    case "REPRESENTATIONAL": return "表征图示";
+                    default: return "未知";
+                }
+            }
+
+            // 更新信息面板
+            function updateInfo() {
+                document.getElementById('nodeCount').textContent = graphData.nodes.length;
+                document.getElementById('edgeCount').textContent = graphData.links.length;
+            }
+
+            // 控制功能
+            function resetView() {
+                svg.transition().duration(750).call(
+                    d3.zoom().transform,
+                    d3.zoomIdentity
+                );
+            }
+
+            function togglePhysics() {
+                physicsEnabled = !physicsEnabled;
+                if (physicsEnabled) {
+                    simulation.alpha(1).restart();
+                } else {
+                    simulation.stop();
+                    nodes.forEach(d => {
+                        d.fx = d.x;
+                        d.fy = d.y;
+                    });
+                }
+            }
+
+            function toggleLabels() {
+                showLabels = !showLabels;
+                svg.selectAll("text").style("display", showLabels ? "block" : "none");
+            }
+
+            function exportImage() {
+                const svgElement = document.querySelector("svg");
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+                const img = new Image();
+
+                canvas.width = width;
+                canvas.height = height;
+
+                img.onload = function () {
+                    ctx.fillStyle = "#080c1f";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(img, 0, 0);
+
+                    const link = document.createElement("a");
+                    link.download = "知识图谱.png";
+                    link.href = canvas.toDataURL();
+                    link.click();
+                };
+
+                img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
+            }
+
+            function showHelp() {
+                alert(`📚 知识图谱使用帮助
+
+🖱️ 操作说明：
+• 拖拽节点：移动知识点位置
+• 滚轮缩放：放大缩小视图
+• 双击节点：查看详细信息
+
+🎨 颜色含义：
+• 🔴 红色：概念理解类知识点
+• 🔵 蓝色：表征图示类知识点  
+• 🟢 青色：程序性计算类知识点
+
+📊 功能按钮：
+• 重置视图：回到初始状态
+• 切换物理引擎：开启/关闭自动布局
+• 切换标签：显示/隐藏知识点名称
+• 导出图片：保存当前视图为PNG图片
+
+💡 提示：点击节点可查看详细信息，拖拽连线可调整布局`);
+            }
+
+            // 窗口大小调整
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                svg.attr("width", width).attr("height", height);
+                simulation.force("center", d3.forceCenter(width / 2, height / 2));
+                simulation.alpha(1).restart();
+            });
+
+            // 页面加载完成后初始化
+            window.addEventListener('load', init);
+        </script>
+    </body>
+
+</html>

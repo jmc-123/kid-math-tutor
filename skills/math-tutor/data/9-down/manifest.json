@@ -1,0 +1,14 @@
+{
+  "version": "pep-math-9down-v1",
+  "textbook": "义务教育教科书·数学九年级下册（人教版）",
+  "publisher": "人民教育出版社",
+  "grade": "9-down",
+  "stats": {"topics": 11, "dependencies": 15, "clusters": 4, "standards": 9},
+  "chapters": [
+    {"chapter": 26, "title": "反比例函数", "topics": 3},
+    {"chapter": 27, "title": "相似", "topics": 4},
+    {"chapter": 28, "title": "锐角三角函数", "topics": 2},
+    {"chapter": 29, "title": "投影与视图", "topics": 2}
+  ],
+  "typeDistribution": {"CONCEPTUAL": 4, "PROCEDURAL": 4, "REPRESENTATIONAL": 3}
+}

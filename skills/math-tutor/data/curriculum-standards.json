@@ -1,0 +1,205 @@
+{
+  "curriculumCount": 1,
+  "curricula": [
+    {
+      "slug": "pep-math-2022",
+      "country": "CN",
+      "name": "义务教育教科书·数学（人教版2022）",
+      "version": "2022",
+      "sourceUrl": "http://www.pep.com.cn",
+      "textIncluded": true,
+      "license": "© 人民教育出版社",
+      "topicCount": 64,
+      "topics": [
+        {
+          "key": "pep-math-2022:7上.1.1",
+          "code": "七年级上册 第一章 1.1 正数和负数",
+          "data": {
+            "chapter": 1,
+            "section": 1,
+            "title": "正数和负数",
+            "pages": "2-5"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.1.2",
+          "code": "七年级上册 第一章 1.2 有理数",
+          "data": {
+            "chapter": 1,
+            "section": 2,
+            "title": "有理数",
+            "subsections": [
+              "有理数",
+              "数轴",
+              "相反数",
+              "绝对值",
+              "有理数大小比较"
+            ],
+            "pages": "6-15"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.1.3",
+          "code": "七年级上册 第一章 1.3 有理数的加减法",
+          "data": {
+            "chapter": 1,
+            "section": 3,
+            "title": "有理数的加减法",
+            "subsections": [
+              "有理数的加法",
+              "有理数的减法",
+              "加减混合运算"
+            ],
+            "pages": "16-27"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.1.4",
+          "code": "七年级上册 第一章 1.4 有理数的乘除法",
+          "data": {
+            "chapter": 1,
+            "section": 4,
+            "title": "有理数的乘除法",
+            "subsections": [
+              "有理数的乘法",
+              "有理数的除法"
+            ],
+            "pages": "28-40"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.1.5",
+          "code": "七年级上册 第一章 1.5 有理数的乘方",
+          "data": {
+            "chapter": 1,
+            "section": 5,
+            "title": "有理数的乘方",
+            "subsections": [
+              "乘方",
+              "科学记数法",
+              "有理数混合运算"
+            ],
+            "pages": "41-48"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.2.1",
+          "code": "七年级上册 第二章 2.1 整式",
+          "data": {
+            "chapter": 2,
+            "section": 1,
+            "title": "整式",
+            "subsections": [
+              "用字母表示数",
+              "单项式",
+              "多项式",
+              "整式"
+            ],
+            "pages": "54-61"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.2.2",
+          "code": "七年级上册 第二章 2.2 整式的加减",
+          "data": {
+            "chapter": 2,
+            "section": 2,
+            "title": "整式的加减",
+            "subsections": [
+              "同类项",
+              "合并同类项",
+              "去括号",
+              "整式加减"
+            ],
+            "pages": "62-71"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.3.1",
+          "code": "七年级上册 第三章 3.1 从算式到方程",
+          "data": {
+            "chapter": 3,
+            "section": 1,
+            "title": "从算式到方程",
+            "subsections": [
+              "一元一次方程",
+              "等式的性质"
+            ],
+            "pages": "78-85"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.3.2",
+          "code": "七年级上册 第三章 3.2 解一元一次方程（一）",
+          "data": {
+            "chapter": 3,
+            "section": 2,
+            "title": "解一元一次方程（一）——合并同类项与移项",
+            "pages": "86-92"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.3.3",
+          "code": "七年级上册 第三章 3.3 解一元一次方程（二）",
+          "data": {
+            "chapter": 3,
+            "section": 3,
+            "title": "解一元一次方程（二）——去括号与去分母",
+            "pages": "93-99"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.3.4",
+          "code": "七年级上册 第三章 3.4 实际问题与一元一次方程",
+          "data": {
+            "chapter": 3,
+            "section": 4,
+            "title": "实际问题与一元一次方程",
+            "pages": "100-108"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.4.1",
+          "code": "七年级上册 第四章 4.1 几何图形",
+          "data": {
+            "chapter": 4,
+            "section": 1,
+            "title": "几何图形",
+            "subsections": [
+              "立体图形与平面图形",
+              "展开图",
+              "点线面体"
+            ],
+            "pages": "114-124"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.4.2",
+          "code": "七年级上册 第四章 4.2 直线、射线、线段",
+          "data": {
+            "chapter": 4,
+            "section": 2,
+            "title": "直线、射线、线段",
+            "pages": "125-131"
+          }
+        },
+        {
+          "key": "pep-math-2022:7上.4.3",
+          "code": "七年级上册 第四章 4.3 角",
+          "data": {
+            "chapter": 4,
+            "section": 3,
+            "title": "角",
+            "subsections": [
+              "角的概念",
+              "角的度量",
+              "角的比较与运算",
+              "余角和补角"
+            ],
+            "pages": "132-141"
+          }
+        }
+      ]
+    }
+  ]
+}

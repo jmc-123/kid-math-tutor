@@ -1,0 +1,566 @@
+{
+  "nodes": [
+    {
+      "id": "mt_ch1_001",
+      "label": "正数和负数的概念",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解正数和负数的定义：大于0的数是正数，在正数前加上符号“−”的数是负数。0既不是正数也不是负数。"
+    },
+    {
+      "id": "mt_ch1_002",
+      "label": "用正负数表示相反意义的量",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.7,
+      "description": "学会用正数和负数表示具有相反意义的实际量，如温度零上/零下、收入/支出、高于/低于海平面等。"
+    },
+    {
+      "id": "mt_ch1_003",
+      "label": "有理数的概念",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.9,
+      "description": "理解有理数的定义：整数和分数统称为有理数。有理数包括正整数、0、负整数、正分数和负分数。"
+    },
+    {
+      "id": "mt_ch1_004",
+      "label": "有理数的分类",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.75,
+      "description": "掌握有理数的两种分类方式：按定义分为整数和分数；按性质分为正有理数、0和负有理数。"
+    },
+    {
+      "id": "mt_ch1_005",
+      "label": "数轴的概念与画法",
+      "domain": "有理数",
+      "type": "REPRESENTATIONAL",
+      "centrality": 0.9,
+      "description": "理解数轴的三个要素：原点、正方向、单位长度。能在纸上画出规范的数轴。"
+    },
+    {
+      "id": "mt_ch1_006",
+      "label": "在数轴上表示有理数",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "学会在数轴上用点表示有理数，以及根据数轴上的点读出对应的有理数。"
+    },
+    {
+      "id": "mt_ch1_007",
+      "label": "相反数",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.8,
+      "description": "理解相反数的定义：只有符号不同的两个数互为相反数。0的相反数是0。互为相反数的两个数之和为0。"
+    },
+    {
+      "id": "mt_ch1_008",
+      "label": "绝对值的概念",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.9,
+      "description": "理解绝对值的定义：数轴上表示一个数的点与原点的距离叫做这个数的绝对值。正数的绝对值是它本身，负数的绝对值是它的相反数，0的绝对值是0。"
+    },
+    {
+      "id": "mt_ch1_009",
+      "label": "求一个数的绝对值",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.75,
+      "description": "熟练求任意有理数的绝对值，包括含字母的绝对值化简。"
+    },
+    {
+      "id": "mt_ch1_010",
+      "label": "有理数大小比较",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.85,
+      "description": "掌握有理数大小比较的规则：正数大于0，0大于负数，正数大于负数；两个负数比较，绝对值大的反而小。能在数轴上直观比较。"
+    },
+    {
+      "id": "mt_ch1_011",
+      "label": "有理数加法法则",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.9,
+      "description": "理解有理数加法法则：同号两数相加取相同符号并把绝对值相加；异号两数相加取绝对值较大数的符号并用较大绝对值减较小绝对值；互为相反数的两数相加得0；一个数加0仍得这个数。"
+    },
+    {
+      "id": "mt_ch1_012",
+      "label": "有理数加法运算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.85,
+      "description": "熟练进行有理数的加法运算，包括同号加法、异号加法、与0相加等各种情况。"
+    },
+    {
+      "id": "mt_ch1_013",
+      "label": "有理数减法法则",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解有理数减法法则：减去一个数等于加上这个数的相反数。即 a - b = a + (-b)。"
+    },
+    {
+      "id": "mt_ch1_014",
+      "label": "有理数减法运算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "熟练进行有理数的减法运算，能将减法转化为加法进行计算。"
+    },
+    {
+      "id": "mt_ch1_015",
+      "label": "加减混合运算与运算律",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "能进行有理数的加减混合运算，掌握加法交换律和结合律，能用运算律进行简便计算。"
+    },
+    {
+      "id": "mt_ch1_016",
+      "label": "有理数乘法法则",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.9,
+      "description": "理解有理数乘法法则：两数相乘同号得正异号得负并把绝对值相乘；任何数与0相乘得0。多个有理数相乘时，负因数个数为偶数积为正，为奇数积为负。"
+    },
+    {
+      "id": "mt_ch1_017",
+      "label": "有理数乘法运算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "熟练进行有理数的乘法运算，包括两个数相乘和多个数相乘。"
+    },
+    {
+      "id": "mt_ch1_018",
+      "label": "倒数",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.75,
+      "description": "理解倒数的定义：乘积为1的两个数互为倒数。0没有倒数。a的倒数是1/a（a≠0）。"
+    },
+    {
+      "id": "mt_ch1_019",
+      "label": "有理数除法法则",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解有理数除法法则：除以一个不为0的数等于乘这个数的倒数。即 a÷b = a × (1/b)，b≠0。"
+    },
+    {
+      "id": "mt_ch1_020",
+      "label": "有理数除法与乘除混合运算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "熟练进行有理数的除法运算和乘除混合运算。"
+    },
+    {
+      "id": "mt_ch1_021",
+      "label": "有理数乘方的概念",
+      "domain": "有理数",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解乘方的意义：n个相同因数a的乘积记作a^n，其中a是底数，n是指数，a^n是幂。乘方是特殊的乘法。"
+    },
+    {
+      "id": "mt_ch1_022",
+      "label": "幂的计算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "熟练计算有理数的乘方，包括正数的幂、负数的幂、0的幂等。"
+    },
+    {
+      "id": "mt_ch1_023",
+      "label": "有理数混合运算",
+      "domain": "有理数",
+      "type": "PROCEDURAL",
+      "centrality": 0.9,
+      "description": "掌握有理数混合运算的顺序：先乘方，再乘除，最后加减；有括号先算括号里的。能正确进行含加减乘除乘方的综合运算。"
+    },
+    {
+      "id": "mt_ch1_024",
+      "label": "科学记数法",
+      "domain": "有理数",
+      "type": "REPRESENTATIONAL",
+      "centrality": 0.7,
+      "description": "学会用科学记数法表示较大的数：将一个数写成 a x 10^n 的形式，其中 1 ≤ |a| < 10，n为正整数。"
+    },
+    {
+      "id": "mt_ch2_001",
+      "label": "用字母表示数",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.8,
+      "description": "理解用字母表示数的意义：字母可以表示任意的数，用字母表示数可以使数量关系的表达更简洁、更具一般性。"
+    },
+    {
+      "id": "mt_ch2_002",
+      "label": "单项式的概念",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解单项式的定义：数与字母的乘积组成的代数式叫做单项式。单独的一个数或一个字母也是单项式。单项式的数字因数是系数，所有字母指数的和是次数。"
+    },
+    {
+      "id": "mt_ch2_003",
+      "label": "多项式的概念",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解多项式的定义：几个单项式的和叫做多项式。多项式中每个单项式叫做项，不含字母的项叫常数项。多项式里次数最高项的次数就是多项式的次数。"
+    },
+    {
+      "id": "mt_ch2_004",
+      "label": "整式的概念与分类",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.8,
+      "description": "理解整式的定义：单项式和多项式统称为整式。能区分单项式和多项式。"
+    },
+    {
+      "id": "mt_ch2_005",
+      "label": "列代数式表示数量关系",
+      "domain": "整式",
+      "type": "PROCEDURAL",
+      "centrality": 0.75,
+      "description": "学会根据实际问题中的数量关系列出代数式，包括和差积商的各种表达。"
+    },
+    {
+      "id": "mt_ch2_006",
+      "label": "同类项的概念",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解同类项的定义：所含字母相同，并且相同字母的指数也相同的项叫做同类项。几个常数项也是同类项。"
+    },
+    {
+      "id": "mt_ch2_007",
+      "label": "合并同类项",
+      "domain": "整式",
+      "type": "PROCEDURAL",
+      "centrality": 0.9,
+      "description": "掌握合并同类项的法则：把同类项的系数相加，所得结果作为系数，字母和字母的指数不变。"
+    },
+    {
+      "id": "mt_ch2_008",
+      "label": "去括号法则",
+      "domain": "整式",
+      "type": "CONCEPTUAL",
+      "centrality": 0.85,
+      "description": "理解去括号法则：括号前是+号，去掉括号和它前面的+号，括号里各项不变号；括号前是-号，去掉括号和它前面的-号，括号里各项变号。"
+    },
+    {
+      "id": "mt_ch2_009",
+      "label": "整式的加减运算",
+      "domain": "整式",
+      "type": "PROCEDURAL",
+      "centrality": 0.9,
+      "description": "掌握整式加减的步骤：先去括号，再合并同类项。能进行多项式的加减运算。"
+    },
+    {
+      "id": "mt_ch2_010",
+      "label": "化简求值",
+      "domain": "整式",
+      "type": "PROCEDURAL",
+      "centrality": 0.8,
+      "description": "学会先化简整式再代入求值的方法。能将整式的加减运算应用于求值问题。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mt_ch1_001",
+      "target": "mt_ch1_002",
+      "strength": "hard",
+      "reason": "必须先理解正负数的概念，才能用它们表示相反意义的量"
+    },
+    {
+      "source": "mt_ch1_001",
+      "target": "mt_ch1_003",
+      "strength": "hard",
+      "reason": "有理数是在正数和负数基础上的概念扩展"
+    },
+    {
+      "source": "mt_ch1_003",
+      "target": "mt_ch1_004",
+      "strength": "hard",
+      "reason": "必须先理解有理数的定义，才能对有理数进行分类"
+    },
+    {
+      "source": "mt_ch1_003",
+      "target": "mt_ch1_005",
+      "strength": "hard",
+      "reason": "数轴是有理数的图形表示工具，需要先理解有理数"
+    },
+    {
+      "source": "mt_ch1_005",
+      "target": "mt_ch1_006",
+      "strength": "hard",
+      "reason": "在数轴上表示有理数需要先掌握数轴的画法"
+    },
+    {
+      "source": "mt_ch1_003",
+      "target": "mt_ch1_006",
+      "strength": "hard",
+      "reason": "需要理解有理数才能在数轴上表示它们"
+    },
+    {
+      "source": "mt_ch1_006",
+      "target": "mt_ch1_007",
+      "strength": "hard",
+      "reason": "相反数的概念需要借助数轴来理解"
+    },
+    {
+      "source": "mt_ch1_006",
+      "target": "mt_ch1_008",
+      "strength": "hard",
+      "reason": "绝对值的定义是数轴上点到原点的距离"
+    },
+    {
+      "source": "mt_ch1_007",
+      "target": "mt_ch1_008",
+      "strength": "soft",
+      "reason": "负数的绝对值等于其相反数，了解相反数有助于理解绝对值"
+    },
+    {
+      "source": "mt_ch1_008",
+      "target": "mt_ch1_009",
+      "strength": "hard",
+      "reason": "求绝对值需要先理解绝对值的定义"
+    },
+    {
+      "source": "mt_ch1_008",
+      "target": "mt_ch1_010",
+      "strength": "hard",
+      "reason": "比较两个负数的大小需要用到绝对值"
+    },
+    {
+      "source": "mt_ch1_006",
+      "target": "mt_ch1_010",
+      "strength": "hard",
+      "reason": "有理数大小比较可通过数轴直观理解"
+    },
+    {
+      "source": "mt_ch1_001",
+      "target": "mt_ch1_011",
+      "strength": "hard",
+      "reason": "有理数加法涉及正数和负数的运算"
+    },
+    {
+      "source": "mt_ch1_008",
+      "target": "mt_ch1_011",
+      "strength": "hard",
+      "reason": "加法法则中需要用到绝对值进行计算"
+    },
+    {
+      "source": "mt_ch1_011",
+      "target": "mt_ch1_012",
+      "strength": "hard",
+      "reason": "加法运算必须先掌握加法法则"
+    },
+    {
+      "source": "mt_ch1_011",
+      "target": "mt_ch1_013",
+      "strength": "hard",
+      "reason": "减法转化为加法，需要先掌握加法法则"
+    },
+    {
+      "source": "mt_ch1_007",
+      "target": "mt_ch1_013",
+      "strength": "hard",
+      "reason": "减去一个数等于加上其相反数，需要理解相反数"
+    },
+    {
+      "source": "mt_ch1_013",
+      "target": "mt_ch1_014",
+      "strength": "hard",
+      "reason": "减法运算需要先掌握减法法则"
+    },
+    {
+      "source": "mt_ch1_012",
+      "target": "mt_ch1_014",
+      "strength": "hard",
+      "reason": "减法转化为加法后需要进行加法运算"
+    },
+    {
+      "source": "mt_ch1_012",
+      "target": "mt_ch1_015",
+      "strength": "hard",
+      "reason": "加减混合运算需要熟练的加法运算能力"
+    },
+    {
+      "source": "mt_ch1_014",
+      "target": "mt_ch1_015",
+      "strength": "hard",
+      "reason": "加减混合运算需要熟练的减法运算能力"
+    },
+    {
+      "source": "mt_ch1_008",
+      "target": "mt_ch1_016",
+      "strength": "hard",
+      "reason": "乘法法则中需要计算绝对值的乘积"
+    },
+    {
+      "source": "mt_ch1_016",
+      "target": "mt_ch1_017",
+      "strength": "hard",
+      "reason": "乘法运算需要先掌握乘法法则"
+    },
+    {
+      "source": "mt_ch1_016",
+      "target": "mt_ch1_018",
+      "strength": "hard",
+      "reason": "倒数的定义基于乘积为1，需要先理解乘法"
+    },
+    {
+      "source": "mt_ch1_018",
+      "target": "mt_ch1_019",
+      "strength": "hard",
+      "reason": "除以一个数等于乘它的倒数"
+    },
+    {
+      "source": "mt_ch1_016",
+      "target": "mt_ch1_019",
+      "strength": "hard",
+      "reason": "除法转化为乘法后需要运用乘法法则"
+    },
+    {
+      "source": "mt_ch1_019",
+      "target": "mt_ch1_020",
+      "strength": "hard",
+      "reason": "除法运算需要先掌握除法法则"
+    },
+    {
+      "source": "mt_ch1_017",
+      "target": "mt_ch1_020",
+      "strength": "hard",
+      "reason": "乘除混合运算需要熟练的乘法运算能力"
+    },
+    {
+      "source": "mt_ch1_017",
+      "target": "mt_ch1_021",
+      "strength": "hard",
+      "reason": "乘方是特殊乘法，需要先理解乘法"
+    },
+    {
+      "source": "mt_ch1_021",
+      "target": "mt_ch1_022",
+      "strength": "hard",
+      "reason": "幂的计算需要先理解乘方的概念"
+    },
+    {
+      "source": "mt_ch1_015",
+      "target": "mt_ch1_023",
+      "strength": "hard",
+      "reason": "混合运算中的加减部分需要加减运算能力"
+    },
+    {
+      "source": "mt_ch1_020",
+      "target": "mt_ch1_023",
+      "strength": "hard",
+      "reason": "混合运算中的乘除部分需要乘除运算能力"
+    },
+    {
+      "source": "mt_ch1_022",
+      "target": "mt_ch1_023",
+      "strength": "hard",
+      "reason": "混合运算中的乘方部分需要幂的计算能力"
+    },
+    {
+      "source": "mt_ch1_021",
+      "target": "mt_ch1_024",
+      "strength": "hard",
+      "reason": "科学记数法需要用到10的幂"
+    },
+    {
+      "source": "mt_ch2_001",
+      "target": "mt_ch2_002",
+      "strength": "hard",
+      "reason": "单项式是用字母表示数的直接应用"
+    },
+    {
+      "source": "mt_ch2_002",
+      "target": "mt_ch2_003",
+      "strength": "hard",
+      "reason": "多项式由单项式的和构成"
+    },
+    {
+      "source": "mt_ch2_002",
+      "target": "mt_ch2_004",
+      "strength": "hard",
+      "reason": "整式的分类需要先理解单项式"
+    },
+    {
+      "source": "mt_ch2_003",
+      "target": "mt_ch2_004",
+      "strength": "hard",
+      "reason": "整式的分类需要先理解多项式"
+    },
+    {
+      "source": "mt_ch2_001",
+      "target": "mt_ch2_005",
+      "strength": "hard",
+      "reason": "列代数式需要先学会用字母表示数"
+    },
+    {
+      "source": "mt_ch2_002",
+      "target": "mt_ch2_006",
+      "strength": "hard",
+      "reason": "判断同类项需要理解单项式的字母和指数"
+    },
+    {
+      "source": "mt_ch2_006",
+      "target": "mt_ch2_007",
+      "strength": "hard",
+      "reason": "合并同类项需要先识别同类项"
+    },
+    {
+      "source": "mt_ch1_012",
+      "target": "mt_ch2_007",
+      "strength": "soft",
+      "reason": "合并同类项需要系数相加，用到有理数加法"
+    },
+    {
+      "source": "mt_ch2_002",
+      "target": "mt_ch2_008",
+      "strength": "hard",
+      "reason": "去括号涉及符号变化，需要理解代数式的结构"
+    },
+    {
+      "source": "mt_ch1_007",
+      "target": "mt_ch2_008",
+      "strength": "soft",
+      "reason": "去括号变号与相反数概念相关"
+    },
+    {
+      "source": "mt_ch2_007",
+      "target": "mt_ch2_009",
+      "strength": "hard",
+      "reason": "整式加减需要合并同类项"
+    },
+    {
+      "source": "mt_ch2_008",
+      "target": "mt_ch2_009",
+      "strength": "hard",
+      "reason": "整式加减常需要先去括号"
+    },
+    {
+      "source": "mt_ch2_009",
+      "target": "mt_ch2_010",
+      "strength": "hard",
+      "reason": "化简求值需要先掌握整式加减运算"
+    },
+    {
+      "source": "mt_ch1_001",
+      "target": "mt_ch2_001",
+      "strength": "soft",
+      "reason": "用字母表示数建立在对数的认识基础上"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "version": "pep-math-9down-v1",
+  "clusters": [
+    {"subject": "Mathematics", "domain": "反比例函数", "ageRangeStart": 14, "summary": "第三种函数类型，图象为双曲线。k的正负决定象限，每个象限内单调性固定。与一次函数相比，反比例函数体现了'成反比'的量化关系。"},
+    {"subject": "Mathematics", "domain": "相似", "ageRangeStart": 14, "summary": "相似是全等的推广——形状相同但大小可不同。AA/SAS/SSS三判定与全等判定呼应。面积比=相似比²，周长比=相似比。位似变换是相似的特殊情况，坐标系中可精确计算。"},
+    {"subject": "Mathematics", "domain": "锐角三角函数", "ageRangeStart": 14, "summary": "sinA/cosA/tanA将角度与边的比值精确关联，由相似三角形保证唯一性。30°/45°/60°的特殊值是基础。解直角三角形和仰俯角应用是核心题型，为高中三角函数打基础。"},
+    {"subject": "Mathematics", "domain": "投影与视图", "ageRangeStart": 14, "summary": "空间思维的培养——从三维物体到二维平面的映射。正投影产生三视图，三视图完整描述几何体形状。是工程、建筑、设计领域的实用技能。"}
+  ]
+}

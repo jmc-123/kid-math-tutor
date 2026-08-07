@@ -1,0 +1,20 @@
+{
+  "version": "pep-math-9down-v1",
+  "dependencies": [
+    {"topicId": "mt_ch26_001", "prerequisiteId": "mt_ch22_001", "strength": "hard", "reason": "反比例函数是函数的一种类型，需建立在函数概念之上"},
+    {"topicId": "mt_ch26_002", "prerequisiteId": "mt_ch26_001", "strength": "hard", "reason": "研究图象性质需先理解反比例函数的定义"},
+    {"topicId": "mt_ch26_002", "prerequisiteId": "mt_ch23_002", "strength": "soft", "reason": "反比例函数图象分析参照一次函数图象的分析框架"},
+    {"topicId": "mt_ch26_003", "prerequisiteId": "mt_ch26_002", "strength": "hard", "reason": "应用建模依赖对反比例函数图象和性质的理解"},
+    {"topicId": "mt_ch27_001", "prerequisiteId": "mt_ch13_001", "strength": "hard", "reason": "相似图形概念是全等三角形的推广（全等=相似比为1）"},
+    {"topicId": "mt_ch27_002", "prerequisiteId": "mt_ch27_001", "strength": "hard", "reason": "相似三角形判定需先理解相似图形的概念"},
+    {"topicId": "mt_ch27_002", "prerequisiteId": "mt_ch13_003", "strength": "hard", "reason": "AA/SAS/SSS判定与全等判定方法并行，需对比理解"},
+    {"topicId": "mt_ch27_003", "prerequisiteId": "mt_ch27_002", "strength": "hard", "reason": "相似性质建立在判定（确认相似）之后"},
+    {"topicId": "mt_ch27_004", "prerequisiteId": "mt_ch27_003", "strength": "hard", "reason": "位似图形一定相似，需先掌握相似的性质"},
+    {"topicId": "mt_ch27_004", "prerequisiteId": "mt_ch9_001", "strength": "hard", "reason": "坐标系中的位似变换需要平面直角坐标系基础"},
+    {"topicId": "mt_ch28_001", "prerequisiteId": "mt_ch20_001", "strength": "hard", "reason": "锐角三角函数定义在直角三角形中，需勾股定理求斜边"},
+    {"topicId": "mt_ch28_001", "prerequisiteId": "mt_ch27_002", "strength": "hard", "reason": "三角函数值与角唯一对应的保证来自相似三角形（AA判定）"},
+    {"topicId": "mt_ch28_002", "prerequisiteId": "mt_ch28_001", "strength": "hard", "reason": "解直角三角形直接使用三角函数定义和特殊值"},
+    {"topicId": "mt_ch29_001", "prerequisiteId": "mt_ch13_001", "strength": "soft", "reason": "投影概念涉及几何图形在平面上的映射"},
+    {"topicId": "mt_ch29_002", "prerequisiteId": "mt_ch29_001", "strength": "hard", "reason": "三视图是正投影的具体应用"}
+  ]
+}

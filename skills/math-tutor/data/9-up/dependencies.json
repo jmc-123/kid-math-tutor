@@ -1,0 +1,30 @@
+{
+  "version": "pep-math-9up-v1",
+  "dependencies": [
+    {"topicId": "mt_ch21_001", "prerequisiteId": "mt_ch15_001", "strength": "hard", "reason": "一元二次方程是整式方程，需整式运算基础（整式乘法、因式分解）"},
+    {"topicId": "mt_ch21_002", "prerequisiteId": "mt_ch21_001", "strength": "hard", "reason": "配方法是在一元二次方程概念基础上的求解方法"},
+    {"topicId": "mt_ch21_002", "prerequisiteId": "mt_ch16_001", "strength": "hard", "reason": "配方法用到完全平方公式 (a+b)²"},
+    {"topicId": "mt_ch21_003", "prerequisiteId": "mt_ch21_002", "strength": "hard", "reason": "求根公式由配方法推导而来，理解公式需先掌握配方"},
+    {"topicId": "mt_ch21_004", "prerequisiteId": "mt_ch21_001", "strength": "hard", "reason": "因式分解法需先将方程化为标准形式"},
+    {"topicId": "mt_ch21_004", "prerequisiteId": "mt_ch16_001", "strength": "hard", "reason": "因式分解法直接用到八上因式分解技能"},
+    {"topicId": "mt_ch21_005", "prerequisiteId": "mt_ch21_003", "strength": "hard", "reason": "应用题建模后通常用公式法或因式分解法求解"},
+    {"topicId": "mt_ch21_005", "prerequisiteId": "mt_ch21_004", "strength": "soft", "reason": "有些应用题能用因式分解法更快求解"},
+    {"topicId": "mt_ch22_001", "prerequisiteId": "mt_ch21_001", "strength": "hard", "reason": "理解二次函数与一元二次方程的关系需先知道一元二次方程"},
+    {"topicId": "mt_ch22_001", "prerequisiteId": "mt_ch23_001", "strength": "hard", "reason": "二次函数建立在一次函数/函数概念基础上（八下已学函数定义）"},
+    {"topicId": "mt_ch22_002", "prerequisiteId": "mt_ch22_001", "strength": "hard", "reason": "平移变换是在掌握 y=ax² 图象后的进一步研究"},
+    {"topicId": "mt_ch22_003", "prerequisiteId": "mt_ch22_002", "strength": "hard", "reason": "一般式需通过配方转化为顶点式"},
+    {"topicId": "mt_ch22_003", "prerequisiteId": "mt_ch21_002", "strength": "hard", "reason": "一般式的分析用到配方技能"},
+    {"topicId": "mt_ch22_004", "prerequisiteId": "mt_ch22_003", "strength": "hard", "reason": "需先理解一般式图象才能理解与方程的关系"},
+    {"topicId": "mt_ch22_004", "prerequisiteId": "mt_ch21_003", "strength": "hard", "reason": "判别式的几何解释对应求根公式中的Δ"},
+    {"topicId": "mt_ch23_001", "prerequisiteId": "mt_ch14_001", "strength": "soft", "reason": "旋转对称性与轴对称（八上）是平行的图形变换"},
+    {"topicId": "mt_ch23_002", "prerequisiteId": "mt_ch23_001", "strength": "hard", "reason": "中心对称是旋转180°的特殊情况"},
+    {"topicId": "mt_ch24_001", "prerequisiteId": "mt_ch13_003", "strength": "hard", "reason": "圆的性质证明需三角形全等知识（垂径定理证明）"},
+    {"topicId": "mt_ch24_002", "prerequisiteId": "mt_ch24_001", "strength": "hard", "reason": "弧弦圆心角关系在垂径定理基础上深化"},
+    {"topicId": "mt_ch24_003", "prerequisiteId": "mt_ch24_002", "strength": "hard", "reason": "切线性质证明用到圆周角定理和直径性质"},
+    {"topicId": "mt_ch24_004", "prerequisiteId": "mt_ch24_001", "strength": "hard", "reason": "弧长公式依赖圆心角和半径的概念"},
+    {"topicId": "mt_ch24_004", "prerequisiteId": "mt_ch24_003", "strength": "soft", "reason": "圆锥侧面展开得扇形，联系点线圆位置关系"},
+    {"topicId": "mt_ch25_001", "prerequisiteId": "mt_ch12_001", "strength": "soft", "reason": "概率建立在已有的数据统计基础上（七上统计调查）"},
+    {"topicId": "mt_ch25_002", "prerequisiteId": "mt_ch25_001", "strength": "hard", "reason": "列举法求概率需先理解随机事件和概率定义"},
+    {"topicId": "mt_ch25_003", "prerequisiteId": "mt_ch25_001", "strength": "hard", "reason": "频率估计概率建立在概率基本概念之上"}
+  ]
+}

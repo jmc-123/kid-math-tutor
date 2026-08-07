@@ -1,0 +1,512 @@
+{
+  "version": "pep-math-8up-v1",
+  "subject": "Mathematics",
+  "grade": "8-up",
+  "textbook": "（根据2022年版课程标准修订）义务教育教科书·数学八年级上册（人教版）",
+  "topics": [
+    {
+      "id": "mt_ch13_001",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "三角形",
+      "name": "三角形的概念与分类",
+      "description": "由不在同一条直线上的三条线段首尾顺次相接所组成的图形叫作三角形。按角分为锐角/直角/钝角三角形，按边分为不等边/等腰/等边三角形。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.7,
+      "evidence": [
+        "能用符号表示三角形及其边、角",
+        "能按边和角对三角形分类",
+        "理解等边三角形是特殊的等腰三角形"
+      ],
+      "assessmentPrompt": "△ABC中，AB=BC=CA，{{name}}能否说明它属于哪些三角形分类（等腰？等边？锐角？）？",
+      "standards": ["pep-math-2022:8上.13.1"]
+    },
+    {
+      "id": "mt_ch13_002",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "三角形",
+      "name": "三角形的边的关系",
+      "description": "三角形两边之和大于第三边，两边之差小于第三边。利用这个性质可以判断三条线段能否组成三角形。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能判断三条线段能否组成三角形",
+        "能证明三角形两边之和大于第三边",
+        "能求第三边的取值范围"
+      ],
+      "assessmentPrompt": "三角形两边长分别为3和7，{{name}}能否求出第三边的取值范围？",
+      "standards": ["pep-math-2022:8上.13.2"]
+    },
+    {
+      "id": "mt_ch13_003",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "三角形",
+      "name": "三角形的中线、高线、角平分线",
+      "description": "三角形的中线连接顶点与对边中点；高线从顶点向对边作垂线段；角平分线平分内角。三条中线交于重心，三条高线交于垂心，三条角平分线交于内心。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.75,
+      "evidence": [
+        "能画出三角形的中线、高线、角平分线",
+        "知道三线分别交于一点",
+        "能区分钝角三角形的高在三角形外的情况"
+      ],
+      "assessmentPrompt": "{{name}}能否画出钝角三角形的三条高线，并说明为什么有两条高在三角形外部？",
+      "standards": ["pep-math-2022:8上.13.2"]
+    },
+    {
+      "id": "mt_ch13_004",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "三角形",
+      "name": "三角形内角和定理及证明",
+      "description": "三角形三个内角的和等于180°。证明方法：过一个顶点作对边的平行线，利用平行线性质将三个角转化到一条直线上。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能证明三角形内角和等于180°",
+        "能利用内角和求未知角",
+        "理解辅助线（作平行线）的作用"
+      ],
+      "assessmentPrompt": "{{name}}能否用作平行线的方法证明三角形内角和为180°，并利用它求出三角形中∠A=50°,∠B=70°时∠C的度数？",
+      "standards": ["pep-math-2022:8上.13.3"]
+    },
+    {
+      "id": "mt_ch13_005",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "三角形",
+      "name": "三角形的外角及其性质",
+      "description": "三角形一个外角等于与它不相邻的两个内角之和。三角形的外角大于任何一个与它不相邻的内角。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能求三角形的外角",
+        "能证明外角等于不相邻两内角之和",
+        "能利用外角性质解题"
+      ],
+      "assessmentPrompt": "△ABC中∠A=45°,∠B=65°，{{name}}能否求出顶点C处的外角，并说明为什么外角>∠A且>∠B？",
+      "standards": ["pep-math-2022:8上.13.3"]
+    },
+    {
+      "id": "mt_ch14_001",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "全等三角形的概念与性质",
+      "description": "能够完全重合的两个三角形叫作全等三角形。全等三角形的对应边相等，对应角相等。一个三角形经过平移、翻折、旋转后与原三角形全等。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能识别全等三角形的对应边和对应角",
+        "能利用全等三角形性质求边长和角度",
+        "理解平移、翻折、旋转不改变全等关系"
+      ],
+      "assessmentPrompt": "△ABC≌△DEF，∠A=50°,AB=5,BC=7，{{name}}能否找出对应的边和角，并求出DE和∠D？",
+      "standards": ["pep-math-2022:8上.14.1"]
+    },
+    {
+      "id": "mt_ch14_002",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "三角形全等的判定（SSS）",
+      "description": "三边分别相等的两个三角形全等（SSS）。这也说明三角形具有稳定性。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能用SSS判定两三角形全等",
+        "能用尺规作一个与已知三角形全等的三角形",
+        "理解三角形稳定性的含义"
+      ],
+      "assessmentPrompt": "已知△ABC和△DEF中AB=DE,BC=EF,AC=DF，{{name}}能否说明这两个三角形全等，并写出规范的证明格式？",
+      "standards": ["pep-math-2022:8上.14.2"]
+    },
+    {
+      "id": "mt_ch14_003",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "三角形全等的判定（SAS）",
+      "description": "两边和它们的夹角分别相等的两个三角形全等（SAS）。注意必须是夹角，两边和一个非夹角对应相等不能判定全等。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能用SAS判定两三角形全等",
+        "能区分夹角和非夹角",
+        "知道SSA不能判定全等"
+      ],
+      "assessmentPrompt": "AB=DE,∠B=∠E,BC=EF，{{name}}能否判定△ABC≌△DEF？如果换成∠A=∠D呢？为什么？",
+      "standards": ["pep-math-2022:8上.14.2"]
+    },
+    {
+      "id": "mt_ch14_004",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "三角形全等的判定（ASA和AAS）",
+      "description": "两角和它们的夹边分别相等的两个三角形全等（ASA）。两角和其中一角的对边分别相等的两个三角形全等（AAS）。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能用ASA和AAS判定两三角形全等",
+        "能根据已知条件选择合适的判定方法",
+        "能利用全等证明线段或角相等"
+      ],
+      "assessmentPrompt": "∠A=∠D,∠B=∠E,AB=DE，{{name}}能否判定全等？用的是ASA还是AAS？换成BC=EF呢？",
+      "standards": ["pep-math-2022:8上.14.2"]
+    },
+    {
+      "id": "mt_ch14_005",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "直角三角形全等的判定（HL）",
+      "description": "斜边和一条直角边分别相等的两个直角三角形全等（HL）。这是直角三角形特有的判定方法。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.75,
+      "evidence": [
+        "能用HL判定直角三角形全等",
+        "知道HL只适用于直角三角形",
+        "能在含直角的图形中识别HL条件"
+      ],
+      "assessmentPrompt": "两个直角三角形斜边相等且一条直角边相等，{{name}}能否判定它们全等？为什么普通三角形不能用这种方法？",
+      "standards": ["pep-math-2022:8上.14.2"]
+    },
+    {
+      "id": "mt_ch14_006",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "全等三角形",
+      "name": "角平分线的性质与判定",
+      "description": "角平分线上的点到角的两边距离相等（性质）。到角的两边距离相等的点在角的平分线上（判定）。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能用全等三角形证明角平分线的性质",
+        "能利用角平分线性质求距离",
+        "能用角平分线的判定证明某条线平分角"
+      ],
+      "assessmentPrompt": "OC是∠AOB的平分线，P在OC上，PM⊥OA于M,PN⊥OB于N，{{name}}能否证明PM=PN？",
+      "standards": ["pep-math-2022:8上.14.3"]
+    },
+    {
+      "id": "mt_ch15_001",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "轴对称与轴对称图形",
+      "description": "如果一个图形沿某条直线折叠后能与另一个图形重合，则这两个图形关于这条直线对称。如果一个图形沿某条直线折叠后能与自身重合，则这个图形是轴对称图形。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能区分轴对称和轴对称图形",
+        "能找出轴对称图形的对称轴",
+        "能判断两个图形是否关于某直线对称"
+      ],
+      "assessmentPrompt": "等腰三角形是轴对称图形吗？对称轴是什么？等边三角形有几条对称轴？{{name}}能否一一说明？",
+      "standards": ["pep-math-2022:8上.15.1"]
+    },
+    {
+      "id": "mt_ch15_002",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "轴对称的性质",
+      "description": "关于某直线对称的两个图形，对应点的连线被对称轴垂直平分。轴对称图形的对称轴是任何一对对应点连线的垂直平分线。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能利用对称性质求对应点",
+        "能证明对应线段相等、对应角相等",
+        "能利用垂直平分线确定对称轴"
+      ],
+      "assessmentPrompt": "点A(1,3)关于x轴对称的点B的坐标是什么？{{name}}能否说明为什么AB被x轴垂直平分？",
+      "standards": ["pep-math-2022:8上.15.1"]
+    },
+    {
+      "id": "mt_ch15_003",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "画轴对称图形",
+      "description": "画一个图形关于某直线的对称图形的方法：找到关键点，作各关键点关于对称轴的对称点（过点作对称轴的垂线，在另一侧截取等长线段），连接对称点。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.7,
+      "evidence": [
+        "能画出图形关于某直线的对称图形",
+        "能找到对称点的坐标",
+        "能利用轴对称设计图案"
+      ],
+      "assessmentPrompt": "△ABC的顶点坐标为A(1,2),B(3,1),C(2,4)，{{name}}能否画出它关于y轴的对称三角形，并写出各顶点坐标？",
+      "standards": ["pep-math-2022:8上.15.2"]
+    },
+    {
+      "id": "mt_ch15_004",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "线段垂直平分线的性质与判定",
+      "description": "线段垂直平分线上的点到线段两端点的距离相等（性质）。到线段两端点距离相等的点在线段的垂直平分线上（判定）。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能证明垂直平分线的性质定理",
+        "能利用垂直平分线求距离",
+        "能用到端点等距判定点在垂直平分线上"
+      ],
+      "assessmentPrompt": "点P在线段AB的垂直平分线上，PA=5，{{name}}能否求PB？并说明为什么？",
+      "standards": ["pep-math-2022:8上.15.2"]
+    },
+    {
+      "id": "mt_ch15_005",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "等腰三角形的性质与判定",
+      "description": "等腰三角形性质：两底角相等（等边对等角）；顶角平分线、底边上的中线、底边上的高互相重合（三线合一）。判定：有两个角相等的三角形是等腰三角形（等角对等边）。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能利用等腰三角形性质求角和边",
+        "能用'三线合一'解题",
+        "能用'等角对等边'证明等腰三角形"
+      ],
+      "assessmentPrompt": "等腰三角形ABC中AB=AC，∠A=40°，{{name}}能否求∠B和∠C？如果知道∠B=∠C=50°能否判定AB=AC？",
+      "standards": ["pep-math-2022:8上.15.3"]
+    },
+    {
+      "id": "mt_ch15_006",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "轴对称",
+      "name": "等边三角形的性质与判定",
+      "description": "等边三角形三边相等，三个角都等于60°。判定：三个角都相等的三角形是等边三角形；有一个角等于60°的等腰三角形是等边三角形。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能利用等边三角形性质求角",
+        "能用两种方法判定等边三角形",
+        "理解等边三角形是等腰三角形的特例"
+      ],
+      "assessmentPrompt": "等腰三角形ABC中AB=AC=BC，{{name}}能否求出每个角的度数？如果只知道AB=AC且∠A=60°，能否判定它是等边三角形？",
+      "standards": ["pep-math-2022:8上.15.3"]
+    },
+    {
+      "id": "mt_ch16_001",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "整式的乘法",
+      "name": "幂的运算法则",
+      "description": "同底数幂相乘底数不变指数相加(a^m·a^n=a^(m+n))；幂的乘方底数不变指数相乘((a^m)^n=a^(mn))；积的乘方等于各因式分别乘方((ab)^n=a^n·b^n)。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能正确运用三条幂运算法则",
+        "能区分同底数幂相乘和幂的乘方",
+        "能进行含幂的综合运算"
+      ],
+      "assessmentPrompt": "计算 a²·a³、(a²)³、(2a)³，{{name}}能否分别说明用了哪条法则？",
+      "standards": ["pep-math-2022:8上.16.1"]
+    },
+    {
+      "id": "mt_ch16_002",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "整式的乘法",
+      "name": "整式的乘法",
+      "description": "单项式乘单项式：系数相乘、同底数幂相乘。单项式乘多项式：分配律展开。多项式乘多项式：每一项分别相乘再合并同类项。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能进行单项式乘单项式运算",
+        "能用分配律展开单项式乘多项式",
+        "能进行多项式乘多项式并合并同类项"
+      ],
+      "assessmentPrompt": "计算 2a²b·3ab³ 和 (x+1)(x-2)，{{name}}能否写出完整步骤？",
+      "standards": ["pep-math-2022:8上.16.2"]
+    },
+    {
+      "id": "mt_ch16_003",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "整式的乘法",
+      "name": "平方差公式",
+      "description": "(a+b)(a-b)=a²-b²。两个数的和与这两个数的差的积等于这两个数的平方差。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能识别可以使用平方差公式的情形",
+        "能正确运用公式计算",
+        "能灵活变形使用公式"
+      ],
+      "assessmentPrompt": "计算(x+3)(x-3)和(2a+b)(2a-b)，{{name}}能否用平方差公式直接得出结果？101×99能用这个公式吗？",
+      "standards": ["pep-math-2022:8上.16.3"]
+    },
+    {
+      "id": "mt_ch16_004",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "整式的乘法",
+      "name": "完全平方公式",
+      "description": "(a+b)²=a²+2ab+b²，(a-b)²=a²-2ab+b²。两数和（差）的平方等于两数的平方和加上（减去）它们积的2倍。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.9,
+      "evidence": [
+        "能识别完全平方式",
+        "能正确展开(a±b)²",
+        "能用公式进行简便运算"
+      ],
+      "assessmentPrompt": "展开(x+2)²和(3a-b)²，{{name}}能否说明中间项2ab（或-2ab）是怎么来的？99²能用这个公式简算吗？",
+      "standards": ["pep-math-2022:8上.16.3"]
+    },
+    {
+      "id": "mt_ch17_001",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "因式分解",
+      "name": "因式分解的概念与提公因式法",
+      "description": "把一个多项式化成几个整式的积的形式叫做因式分解（分解因式）。提公因式法：找出各项的公因式，提到括号外面。因式分解与整式乘法互为逆运算。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "理解因式分解与乘法展开的逆关系",
+        "能找出多项式各项的公因式",
+        "能用提公因式法分解因式"
+      ],
+      "assessmentPrompt": "分解因式：6a²b+9ab²，{{name}}能否找出公因式并写出结果？它和展开 3ab(2a+3b) 是什么关系？",
+      "standards": ["pep-math-2022:8上.17.1"]
+    },
+    {
+      "id": "mt_ch17_002",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "因式分解",
+      "name": "用公式法分解因式",
+      "description": "运用平方差公式的逆用：a²-b²=(a+b)(a-b)。运用完全平方公式的逆用：a²±2ab+b²=(a±b)²。分解因式时应先提公因式，再用公式法，分解到不能再分解为止。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能用平方差公式分解因式",
+        "能用完全平方公式分解因式",
+        "能综合运用提公因式法和公式法"
+      ],
+      "assessmentPrompt": "分解因式：x²-9、x²+6x+9、2x²-8，{{name}}能否写出完整步骤？最后一个需要先提公因式吗？",
+      "standards": ["pep-math-2022:8上.17.2"]
+    },
+    {
+      "id": "mt_ch18_001",
+      "type": "CONCEPTUAL",
+      "subject": "Mathematics",
+      "domain": "分式",
+      "name": "分式的概念与基本性质",
+      "description": "形如A/B（A、B是整式，B中含有字母且B≠0）的式子叫做分式。分式的基本性质：分子分母同乘（或除以）同一个不为零的整式，分式的值不变。约分和通分基于此性质。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能判断一个式子是否为分式",
+        "能确定分式有意义的条件",
+        "能利用基本性质进行约分和通分"
+      ],
+      "assessmentPrompt": "分式 (x+1)/(x-2) 在什么条件下有意义？{{name}}能否化简 (x²-4)/(x-2)？",
+      "standards": ["pep-math-2022:8上.18.1"]
+    },
+    {
+      "id": "mt_ch18_002",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "分式",
+      "name": "分式的乘除运算",
+      "description": "分式乘法：分子相乘作分子，分母相乘作分母。分式除法：除以一个分式等于乘以它的倒数。运算结果要约分到最简。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.8,
+      "evidence": [
+        "能进行分式的乘法运算",
+        "能进行分式的除法运算",
+        "能将结果约分为最简分式"
+      ],
+      "assessmentPrompt": "计算 (x²-1)/x · x/(x+1) 和 (a²)/(ab) ÷ a/b，{{name}}能否写出步骤并化简到最简？",
+      "standards": ["pep-math-2022:8上.18.2"]
+    },
+    {
+      "id": "mt_ch18_003",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "分式",
+      "name": "分式的加减运算",
+      "description": "同分母分式加减：分母不变，分子相加减。异分母分式加减：先通分化为同分母，再加减。通分时找最简公分母。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能进行同分母分式加减",
+        "能找最简公分母进行通分",
+        "能进行异分母分式加减并化简"
+      ],
+      "assessmentPrompt": "计算 1/(x-1) + 1/(x+1)，{{name}}能否通分后化简？最简公分母是什么？",
+      "standards": ["pep-math-2022:8上.18.3"]
+    },
+    {
+      "id": "mt_ch18_004",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "分式",
+      "name": "整数指数幂",
+      "description": "将正整数指数幂扩展到整数指数幂：a⁰=1(a≠0)，a^(-n)=1/a^n(a≠0)。幂的运算法则对整数指数幂仍然成立。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.75,
+      "evidence": [
+        "理解零指数幂和负整数指数幂的定义",
+        "能进行含零指数和负指数的运算",
+        "能用科学记数法表示绝对值小于1的数"
+      ],
+      "assessmentPrompt": "计算 2⁰、3^(-2)、(1/2)^(-3)，{{name}}能否说明负指数幂的含义？0.00056用科学记数法怎么表示？",
+      "standards": ["pep-math-2022:8上.18.4"]
+    },
+    {
+      "id": "mt_ch18_005",
+      "type": "PROCEDURAL",
+      "subject": "Mathematics",
+      "domain": "分式",
+      "name": "分式方程及其应用",
+      "description": "分母中含有未知数的方程叫做分式方程。解法：去分母（方程两边同乘最简公分母）转化为整式方程，解出后必须验根（代入最简公分母检验是否为0）。",
+      "ageRangeStart": 13,
+      "ageRangeEnd": 14,
+      "centrality": 0.85,
+      "evidence": [
+        "能解分式方程",
+        "知道必须验根并能正确验根",
+        "能列分式方程解应用题"
+      ],
+      "assessmentPrompt": "解方程 2/(x-1) = 4/x，{{name}}能否去分母求解并验根？如果解出x=1需要如何处理？",
+      "standards": ["pep-math-2022:8上.18.5"]
+    }
+  ]
+}

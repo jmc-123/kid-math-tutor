@@ -1,0 +1,52 @@
+{
+  "dataset": "人教版七年级数学上册知识图谱",
+  "taxonomyVersion": "pep-math-7up-v1",
+  "basedOn": "withmarbleapp/os-taxonomy schema",
+  "sourceTextbook": "义务教育教科书·数学 七年级上册（人民教育出版社2022版）",
+  "scope": "第1-4章（有理数、整式的加减、一元一次方程、几何图形初步）",
+  "generatedAt": "2026-07-14T12:24:43.000Z",
+  "counts": {
+    "topics": 64,
+    "topicsByDomain": {
+      "有理数": 24,
+      "整式": 10,
+      "一元一次方程": 13,
+      "几何图形": 5,
+      "直线射线线段": 5,
+      "角": 7
+    },
+    "topicsByType": {
+      "CONCEPTUAL": 34,
+      "PROCEDURAL": 27,
+      "REPRESENTATIONAL": 3
+    },
+    "dependencies": 87,
+    "curricula": 1,
+    "curriculumStandards": 64,
+    "clusters": 12
+  },
+  "files": {
+    "topics.json": {
+      "bytes": 44868,
+      "sha256": "25a6c23506d931689f32de0505b5b675ccaace445318b6ff7d5653f27f238770"
+    },
+    "dependencies.json": {
+      "bytes": 15204,
+      "sha256": "037e6080b25a5c2fc9464b18d196c3e97e6cbdc425d975902081578d478ec87d"
+    },
+    "curriculum-standards.json": {
+      "bytes": 5840,
+      "sha256": "9a1b6d0bca1357f7e1454baccbec02d11767f49a36ea689dd36c0e05955ae7ea"
+    },
+    "clusters.json": {
+      "bytes": 4390,
+      "sha256": "48740eb361a425817f967e91aacaf2f620c012fb31589f7b5d4e749c76297c08"
+    }
+  },
+  "schema": {
+    "topics": "https://withmarble.com/taxonomy/schema/topics.schema.json",
+    "dependencies": "https://withmarble.com/taxonomy/schema/dependencies.schema.json",
+    "curriculumStandards": "https://withmarble.com/taxonomy/schema/curriculum-standards.schema.json",
+    "clusters": "https://withmarble.com/taxonomy/schema/clusters.schema.json"
+  }
+}

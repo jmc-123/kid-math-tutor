@@ -1,0 +1,10 @@
+{
+  "version": "pep-math-9up-v1",
+  "clusters": [
+    {"subject": "Mathematics", "domain": "一元二次方程", "ageRangeStart": 14, "summary": "三种解法（配方/公式/因式分解）各有适用场景。判别式Δ=b²-4ac是贯穿二次方程和二次函数的核心工具。实际建模要检验根的实际意义。"},
+    {"subject": "Mathematics", "domain": "二次函数", "ageRangeStart": 14, "summary": "二次函数y=ax²+bx+c的图象是抛物线。顶点式揭示最值和对称轴，判别式揭示与x轴交点数。函数、方程、不等式在图象中统一——是初中数学的核心整合点。"},
+    {"subject": "Mathematics", "domain": "旋转", "ageRangeStart": 14, "summary": "旋转变换补全了图形变换三件套（平移/轴对称/旋转）。中心对称是旋转180°的特例，关于原点对称的点坐标互为相反数，为后续坐标几何服务。"},
+    {"subject": "Mathematics", "domain": "圆", "ageRangeStart": 14, "summary": "圆是初中几何的压轴主题：垂径定理、弧弦圆心角、圆周角定理、切线。直径所对的圆周角=90°是高频考点。弧长和扇形面积公式连接几何与计算。"},
+    {"subject": "Mathematics", "domain": "概率", "ageRangeStart": 14, "summary": "从确定性思维走向随机性思维的起点。等可能事件的概率=有利结果数/总数，列表/树状图是枚举工具。频率稳定在概率附近——大数定律的直觉建立。"}
+  ]
+}

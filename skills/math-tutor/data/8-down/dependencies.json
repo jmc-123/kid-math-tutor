@@ -1,0 +1,32 @@
+{
+  "version": "pep-math-8down-v1",
+  "dependencies": [
+    {"topicId": "mt_ch19_002", "prerequisiteId": "mt_ch19_001", "strength": "hard", "reason": "二次根式乘除需先理解二次根式概念和性质"},
+    {"topicId": "mt_ch19_003", "prerequisiteId": "mt_ch19_002", "strength": "hard", "reason": "加减前需先化简（用到乘除化简法则），才能识别同类根式"},
+    {"topicId": "mt_ch19_001", "prerequisiteId": "mt_ch8_001", "strength": "hard", "reason": "二次根式是平方根概念的代数化延伸"},
+    {"topicId": "mt_ch20_001", "prerequisiteId": "mt_ch19_001", "strength": "hard", "reason": "勾股定理求边长经常得到根式结果"},
+    {"topicId": "mt_ch20_001", "prerequisiteId": "mt_ch13_004", "strength": "soft", "reason": "勾股定理是关于直角三角形的定理，需三角形基础"},
+    {"topicId": "mt_ch20_002", "prerequisiteId": "mt_ch20_001", "strength": "hard", "reason": "逆定理是勾股定理的逆命题，需先掌握正定理"},
+    {"topicId": "mt_ch21_001", "prerequisiteId": "mt_ch13_004", "strength": "hard", "reason": "多边形内角和公式从三角形内角和推导（分割为三角形）"},
+    {"topicId": "mt_ch21_002", "prerequisiteId": "mt_ch21_001", "strength": "hard", "reason": "平行四边形是特殊四边形，需先理解四边形基础"},
+    {"topicId": "mt_ch21_002", "prerequisiteId": "mt_ch7_005", "strength": "hard", "reason": "平行四边形定义和性质涉及平行线判定和性质"},
+    {"topicId": "mt_ch21_003", "prerequisiteId": "mt_ch21_002", "strength": "hard", "reason": "矩形是特殊的平行四边形"},
+    {"topicId": "mt_ch21_004", "prerequisiteId": "mt_ch21_002", "strength": "hard", "reason": "菱形是特殊的平行四边形"},
+    {"topicId": "mt_ch21_005", "prerequisiteId": "mt_ch21_003", "strength": "hard", "reason": "正方形既是矩形又是菱形"},
+    {"topicId": "mt_ch21_005", "prerequisiteId": "mt_ch21_004", "strength": "hard", "reason": "正方形既是矩形又是菱形"},
+    {"topicId": "mt_ch22_001", "prerequisiteId": "mt_ch9_001", "strength": "soft", "reason": "函数图象需要坐标系基础"},
+    {"topicId": "mt_ch22_002", "prerequisiteId": "mt_ch22_001", "strength": "hard", "reason": "函数表示方法建立在函数概念基础上"},
+    {"topicId": "mt_ch22_002", "prerequisiteId": "mt_ch9_001", "strength": "hard", "reason": "图象法需要平面直角坐标系"},
+    {"topicId": "mt_ch23_001", "prerequisiteId": "mt_ch22_001", "strength": "hard", "reason": "一次函数是函数的具体类型"},
+    {"topicId": "mt_ch23_002", "prerequisiteId": "mt_ch23_001", "strength": "hard", "reason": "研究图象性质需先理解一次函数概念"},
+    {"topicId": "mt_ch23_002", "prerequisiteId": "mt_ch22_002", "strength": "hard", "reason": "画图象需掌握函数图象表示方法"},
+    {"topicId": "mt_ch23_003", "prerequisiteId": "mt_ch23_002", "strength": "hard", "reason": "函数与方程不等式的关系依赖图象分析"},
+    {"topicId": "mt_ch23_003", "prerequisiteId": "mt_ch11_003", "strength": "soft", "reason": "从图象读不等式解集需一元一次不等式基础"},
+    {"topicId": "mt_ch23_003", "prerequisiteId": "mt_ch10_001", "strength": "soft", "reason": "两函数交点即方程组的解"},
+    {"topicId": "mt_ch23_004", "prerequisiteId": "mt_ch23_002", "strength": "hard", "reason": "实际问题建模需要掌握一次函数图象和性质"},
+    {"topicId": "mt_ch24_001", "prerequisiteId": "mt_ch12_001", "strength": "soft", "reason": "数据分析建立在统计调查数据收集基础上"},
+    {"topicId": "mt_ch24_002", "prerequisiteId": "mt_ch24_001", "strength": "hard", "reason": "方差计算需要先求平均数"},
+    {"topicId": "mt_ch24_002", "prerequisiteId": "mt_ch8_001", "strength": "soft", "reason": "标准差涉及开平方运算"},
+    {"topicId": "mt_ch24_003", "prerequisiteId": "mt_ch24_001", "strength": "hard", "reason": "四分位数基于中位数概念扩展"}
+  ]
+}

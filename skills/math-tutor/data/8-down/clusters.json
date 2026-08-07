@@ -1,0 +1,30 @@
+{
+  "version": "pep-math-8down-v1",
+  "clusters": [
+    {"subject": "Mathematics", "domain": "二次根式", "ageRangeStart": 13, "summary": "将七年级的平方根概念代数化，学习二次根式的四则运算。化简根式和分母有理化是核心技能，为勾股定理的计算应用做准备。"},
+    {"subject": "Mathematics", "domain": "勾股定理", "ageRangeStart": 13, "summary": "直角三角形中最重要的定理：a²+b²=c²。正定理求边长，逆定理判直角。是初中几何计算的核心工具，连接代数（根式运算）和几何。"},
+    {"subject": "Mathematics", "domain": "四边形·平行四边形体系", "ageRangeStart": 13, "summary": "建立四边形的层级关系：平行四边形→矩形/菱形→正方形。每一层增加一个约束条件，获得更多性质。这是分类研究思想的典型体现。"},
+    {"subject": "Mathematics", "domain": "函数·基本概念", "ageRangeStart": 13, "summary": "引入函数概念——变量间的确定对应关系。三种表示方法（解析式、图象、表格）各有优势。函数是初中代数的核心思想，贯穿后续学习。"},
+    {"subject": "Mathematics", "domain": "一次函数", "ageRangeStart": 13, "summary": "第一个具体函数类型：y=kx+b。图象是直线，k决定增减方向，b决定纵截距。一次函数统一了方程、不等式、方程组的图象解释。"},
+    {"subject": "Mathematics", "domain": "数据分析·集中与离散", "ageRangeStart": 13, "summary": "用平均数/中位数/众数描述集中趋势，用方差/标准差/四分位数描述离散程度。选择合适的统计量描述数据特征是数据素养的核心。"}
+  ],
+  "standards": [
+    {"id": "pep-math-2022:8下.19.1", "description": "理解二次根式概念及其性质", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.19.2", "description": "能进行二次根式的乘除运算和化简", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.19.3", "description": "能进行二次根式的加减运算", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.20.1", "description": "掌握勾股定理及其应用", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·图形与几何"},
+    {"id": "pep-math-2022:8下.20.2", "description": "掌握勾股定理的逆定理", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·图形与几何"},
+    {"id": "pep-math-2022:8下.21.1", "description": "掌握多边形内角和公式", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·图形与几何"},
+    {"id": "pep-math-2022:8下.21.2", "description": "掌握平行四边形的性质和判定", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·图形与几何"},
+    {"id": "pep-math-2022:8下.21.3", "description": "掌握矩形、菱形、正方形的性质和判定", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·图形与几何"},
+    {"id": "pep-math-2022:8下.22.1", "description": "理解函数概念，能确定自变量取值范围", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.22.2", "description": "掌握函数的三种表示方法", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.23.1", "description": "理解一次函数和正比例函数的概念", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.23.2", "description": "掌握一次函数的图象和性质", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.23.3", "description": "理解一次函数与方程、不等式的关系", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.23.4", "description": "能用一次函数解决实际问题", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·数与代数"},
+    {"id": "pep-math-2022:8下.24.1", "description": "能计算平均数、中位数、众数", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·统计与概率"},
+    {"id": "pep-math-2022:8下.24.2", "description": "理解方差的意义，能用方差比较数据稳定性", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·统计与概率"},
+    {"id": "pep-math-2022:8下.24.3", "description": "了解四分位数的概念和计算", "source": "义务教育数学课程标准(2022版)", "section": "第二学段·统计与概率"}
+  ]
+}
