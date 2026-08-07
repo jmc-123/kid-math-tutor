@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 node_modules/
+.worktrees/
 
 # 内部过程记录，不对外发布
 CORRECTION_NOTE.md
