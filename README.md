@@ -271,7 +271,7 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 #### 国内平台
 
-1. **CodeBuddy**：在插件市场搜索 "math-tutor" 或手动安装
+1. **WorkBuddy**：在插件市场搜索 "math-tutor" 或手动安装
 2. **通义灵码**：将技能文件放入项目的 `.lingma/skills/` 目录
 3. **百度Comate**：通过插件管理器安装，或手动配置技能路径
 4. **讯飞星火**：在智能体平台导入技能文件
@@ -398,9 +398,9 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 ### 4. 动态可视化
 
-- `visualization_8up_simple.html` 使用纯JavaScript实现，避免外部依赖问题
+- `visualization_8up.html` 使用纯JavaScript实现，避免外部依赖问题
 - 数据嵌入HTML文件，解决file://协议安全问题
-- 支持8年级上册知识点的交互式探索
+- 支持**人教版八年级数学上册知识图谱**的交互式探索
 - 提供拖拽、缩放、点击查看详情等功能
 
 ### 5. 跨平台兼容
@@ -590,7 +590,7 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 **A**: 这是因为浏览器的安全策略导致的file://协议问题。解决方案：
 
-1. **使用新版可视化文件**：使用 `visualization_8up_simple.html`，该文件已嵌入所有数据，无需外部请求
+1. **使用新版可视化文件**：使用 `visualization_8up.html`，该文件已嵌入所有数据，无需外部请求
 2. **启动本地服务器**：在项目目录运行 `python -m http.server 8000` 或 `npx serve .`
 3. **使用在线版本**：将文件部署到GitHub Pages或其他静态托管服务
 
@@ -604,7 +604,7 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 ### Q: 如何切换其他年级的知识图谱？
 
-**A**: 目前8年级上版本已完整实现，其他年级版本正在开发中。您可以根据需要修改HTML文件中的数据部分。
+**A**: 目前**人教版八年级数学上册知识图谱**版本已完整实现，其他年级版本正在开发中。您可以根据需要修改HTML文件中的数据部分。
 
 ## �🚀 未来计划
 
