@@ -265,13 +265,12 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 #### 国际平台
 
-1. **Claude Code**：在 Claude Code 中搜索 "math-tutor" 或 "数学辅导"
-2. **VS Code**：安装 Copilot 扩展后，将 `skills/math-tutor/SKILL.md` 放入 `.vscode/skills/` 目录
-3. **Cursor**：在项目根目录创建 `.cursor/skills/math-tutor/` 文件夹，放入 SKILL.md
+1. **VS Code**：安装 Copilot 扩展后，将 `skills/math-tutor/SKILL.md` 放入 `.vscode/skills/` 目录
+2. **Cursor**：在项目根目录创建 `.cursor/skills/math-tutor/` 文件夹，放入 SKILL.md
 
 #### 国内平台
 
-1. **WorkBuddy**：在插件市场搜索 "math-tutor" 或手动安装
+1. **WorkBuddy**：在插件市场搜索 "K12数学老师" 或手动安装
 2. **通义灵码**：将技能文件放入项目的 `.lingma/skills/` 目录
 3. **百度Comate**：通过插件管理器安装，或手动配置技能路径
 4. **讯飞星火**：在智能体平台导入技能文件
@@ -598,7 +597,7 @@ print('\n'.join(f'{i+1}. {n}' for i, n in enumerate(order)))
 
 **A**: 检查以下几点：
 
-1. 确保使用的是 `visualization_8up_simple.html` 文件
+1. 确保使用的是 `visualization_8up.html` 文件
 2. 检查浏览器控制台是否有JavaScript错误
 3. 确认文件编码为UTF-8
 

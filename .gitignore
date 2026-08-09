@@ -9,3 +9,6 @@ CORRECTION_NOTE.md
 ENHANCEMENT_SUMMARY.md
 math-tutor-intro-article.md
 docs/superpowers/plans/2026-08-07-publication-readiness.md
+
+# 忽略整个docs文件夹
+docs/
