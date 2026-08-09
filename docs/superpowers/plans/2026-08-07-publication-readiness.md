@@ -22,11 +22,13 @@
 ### Task 1: Add data-validator test coverage
 
 **Files:**
+
 - Create: `tests/test_validate_data.py`
 - Create: `scripts/__init__.py`
 - Test: `tests/test_validate_data.py`
 
 **Interfaces:**
+
 - Produces: `scripts.validate_data.validate_dataset(dataset_dir: pathlib.Path) -> list[str]`
 - Produces: `scripts.validate_data.main(argv: Sequence[str] | None = None) -> int`
 
@@ -100,11 +102,13 @@ git commit -m "test: define data validation expectations"
 ### Task 2: Implement the dependency-free data validator
 
 **Files:**
+
 - Create: `scripts/validate_data.py`
 - Modify: `tests/test_validate_data.py`
 - Test: `tests/test_validate_data.py`
 
 **Interfaces:**
+
 - Consumes: grade directories containing `topics.json`, `dependencies.json`, `clusters.json`, and `manifest.json`.
 - Produces: a list of human-readable validation errors per dataset and process exit status `0` on success or `1` on validation failure.
 
@@ -238,9 +242,11 @@ git commit -m "feat: validate knowledge graph data"
 ### Task 3: Run data validation in GitHub Actions
 
 **Files:**
+
 - Create: `.github/workflows/validate-data.yml`
 
 **Interfaces:**
+
 - Consumes: repository checkout on `push` and `pull_request`.
 - Produces: a status check named `Validate knowledge graph data`.
 
@@ -285,12 +291,14 @@ git commit -m "ci: validate knowledge graph data"
 ### Task 4: Add licensing, contribution guidance, and issue templates
 
 **Files:**
+
 - Create: `LICENSE`
 - Create: `CONTRIBUTING.md`
 - Create: `.github/ISSUE_TEMPLATE/data-correction.yml`
 - Create: `.github/ISSUE_TEMPLATE/feature-request.yml`
 
 **Interfaces:**
+
 - Consumes: GitHub issue forms and contributor pull requests.
 - Produces: clear licensing boundaries and structured feedback.
 
@@ -380,9 +388,11 @@ git commit -m "docs: add contribution and issue guidance"
 ### Task 5: Improve skill discovery metadata
 
 **Files:**
+
 - Modify: `skills/math-tutor/SKILL.md:1-4`
 
 **Interfaces:**
+
 - Produces: an Agent Skills-compatible frontmatter description with observable triggers.
 
 - [ ] **Step 1: Preserve the user’s current change and replace only the description value**
@@ -415,9 +425,11 @@ git commit -m "docs: improve math tutor skill discovery"
 ### Task 6: Rebuild the README landing section and correct stale content
 
 **Files:**
+
 - Modify: `README.md`
 
 **Interfaces:**
+
 - Produces: bilingual landing content; Chinese detailed documentation; verified repository links and workflows.
 
 - [ ] **Step 1: Reread the entire current README and preserve valuable Chinese reference content**
@@ -436,7 +448,7 @@ Use this content, then retain the existing detailed sections after the first hor
 为学生、家长、教师和 AI 智能体提供可追溯的错题诊断、个性化练习与自学路径；全部知识图谱数据随技能包离线分发。
 
 | 169 个微知识点 | 237 条前置依赖 | 覆盖 6 册教材 | 100% 离线可用 |
-| :---: | :---: | :---: | :---: |
+| :------------: | :------------: | :-----------: | :-----------: |
 
 ## 从错题到补强，只需一个提示
 
@@ -496,6 +508,7 @@ git commit -m "docs: improve release landing page"
 ### Task 7: Final publication-readiness verification
 
 **Files:**
+
 - Verify: `README.md`, `skills/math-tutor/SKILL.md`, `LICENSE`, `CONTRIBUTING.md`, `.github/`, `scripts/`, `tests/`
 
 - [ ] **Step 1: Run the full local verification suite**
